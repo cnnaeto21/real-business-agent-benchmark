@@ -28,8 +28,15 @@ RBAB is built as a sequential pipeline: harness definitions lock the schema and 
   2. Each rubric has concrete score anchors per dimension ("Score 5 means X; Score 1 means Y") and an explicit anti-verbosity instruction
   3. Each harness has a semver version in `harness.yaml` and a designated judge model (Claude Sonnet, temperature 0)
   4. The judge prompt is authored and committed to `docs/judge-prompt.md`
-  5. Running the Zod schema through `zod-to-json-schema` produces valid JSON Schema for each harness with no errors
-**Plans**: TBD
+  5. Running `z.toJSONSchema()` (Zod v4 native) on each harness schema.ts produces valid JSON Schema with no errors (note: zod-to-json-schema is EOL; use Zod v4 native API)
+**Plans**: 5 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Project bootstrap: package.json (zod@^4.3.6), directory scaffold, validate-schemas.ts
+- [ ] 01-02-PLAN.md — inventory-optimization harness: all 5 artifacts + 2 CSVs
+- [ ] 01-03-PLAN.md — pricing-strategy harness: all 5 artifacts + 2 CSVs
+- [ ] 01-04-PLAN.md — financial-forecasting harness: all 5 artifacts + 2 CSVs
+- [ ] 01-05-PLAN.md — docs/judge-prompt.md + cross-harness schema validation
 
 ### Phase 2: CLI Runner
 **Goal**: A working `benchmark` CLI that loads a harness, renders a prompt with real data, calls one LLM provider, and writes raw output to disk
@@ -94,7 +101,7 @@ Phases execute in strict dependency order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Harness Definitions | 0/? | Not started | - |
+| 1. Harness Definitions | 0/5 | Planned | - |
 | 2. CLI Runner | 0/? | Not started | - |
 | 3. Eval Engine | 0/? | Not started | - |
 | 4. Reference Runs | 0/? | Not started | - |
