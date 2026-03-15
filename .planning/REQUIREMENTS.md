@@ -9,10 +9,10 @@
 
 ### Harness Definitions
 
-- [ ] **HRNS-01**: Three harness packages exist: inventory-optimization, pricing-strategy, financial-forecasting
+- [x] **HRNS-01**: Three harness packages exist: inventory-optimization, pricing-strategy, financial-forecasting
 - [ ] **HRNS-02**: Each harness has a `harness.yaml` declarative spec (data files, prompt template, schema path, rubric path, judge model, provider list)
 - [ ] **HRNS-03**: Each harness includes anonymized CSV data with location names and dollar amounts scrubbed
-- [ ] **HRNS-04**: Each harness has a structured output schema defined in Zod (generates TypeScript types and JSON Schema from single source)
+- [x] **HRNS-04**: Each harness has a structured output schema defined in Zod (generates TypeScript types and JSON Schema from single source)
 - [ ] **HRNS-05**: Each harness has an eval rubric with concrete score anchors per dimension ("Score 5 means X; Score 1 means Y")
 - [ ] **HRNS-06**: Rubric includes explicit anti-verbosity instruction ("Do not score higher simply because the response is longer")
 - [ ] **HRNS-07**: Each harness is versioned (semver in harness.yaml)
@@ -99,10 +99,10 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| HRNS-01 | Phase 1 | Pending |
+| HRNS-01 | Phase 1 | Complete |
 | HRNS-02 | Phase 1 | Pending |
 | HRNS-03 | Phase 1 | Pending |
-| HRNS-04 | Phase 1 | Pending |
+| HRNS-04 | Phase 1 | Complete |
 | HRNS-05 | Phase 1 | Pending |
 | HRNS-06 | Phase 1 | Pending |
 | HRNS-07 | Phase 1 | Pending |
