@@ -1,0 +1,25 @@
+name: pricing-strategy
+version: 1.0.0
+description: "Given product sales velocity, current prices, and cost data for a vending machine operation, recommend price adjustments that optimize revenue while maintaining competitive positioning"
+
+data:
+  - file: data/products.csv
+    inject_as: products_table
+  - file: data/sales.csv
+    inject_as: sales_table
+
+prompt:
+  template: prompt.md
+
+output:
+  schema: schema.ts
+
+eval:
+  rubric: rubric.md
+  judge_model: anthropic/claude-sonnet-4-6
+  judge_temperature: 0
+
+providers:
+  - anthropic/claude-sonnet-4-6
+  - openai/gpt-4o
+  - google/gemini-1.5-pro
