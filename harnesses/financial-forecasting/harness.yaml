@@ -1,0 +1,25 @@
+name: financial-forecasting
+version: 1.0.0
+description: "Given historical monthly P&L data and expense category breakdowns for a vending machine operation, produce a 3-month financial forecast with supporting rationale and risk/opportunity identification"
+
+data:
+  - file: data/monthly-pl.csv
+    inject_as: monthly_pl_table
+  - file: data/expenses.csv
+    inject_as: expenses_table
+
+prompt:
+  template: prompt.md
+
+output:
+  schema: schema.ts
+
+eval:
+  rubric: rubric.md
+  judge_model: anthropic/claude-sonnet-4-6
+  judge_temperature: 0
+
+providers:
+  - anthropic/claude-sonnet-4-6
+  - openai/gpt-4o
+  - google/gemini-1.5-pro
