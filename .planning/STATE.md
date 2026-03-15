@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Completed 01-harness-definitions-01-PLAN.md
-last_updated: "2026-03-15T22:22:51.516Z"
-last_activity: 2026-03-12 — Roadmap created, all 32 v1 requirements mapped across 6 phases
+status: executing
+stopped_at: Completed 01-harness-definitions-03-PLAN.md
+last_updated: "2026-03-15T22:31:21.118Z"
+last_activity: "2026-03-15 — Completed 01-02 (inventory-optimization harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
 progress:
   total_phases: 6
   completed_phases: 0
   total_plans: 5
-  completed_plans: 1
-  percent: 20
+  completed_plans: 4
+  percent: 80
 ---
 
 # Project State
@@ -26,30 +26,32 @@ See: .planning/PROJECT.md (updated 2026-03-12)
 ## Current Position
 
 Phase: 1 of 6 (Harness Definitions)
-Plan: 1 of 5 in current phase
+Plan: 4 of 5 in current phase
 Status: In Progress
-Last activity: 2026-03-15 — Completed 01-01 (project bootstrap: package.json, harness scaffolds, validate-schemas.ts)
+Last activity: 2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)
 
-Progress: [██░░░░░░░░] 20%
+Progress: [████████░░] 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 2 min
-- Total execution time: ~2 min
+- Total plans completed: 2
+- Average duration: 3 min
+- Total execution time: ~6 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-harness-definitions | 1/5 | 2 min | 2 min |
+| 01-harness-definitions | 2/5 | 6 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 2 min
+- Last 5 plans: 2 min, 4 min
 - Trend: -
 
 *Updated after each plan completion*
+| Phase 01-harness-definitions P04 | 3 | 2 tasks | 7 files |
+| Phase 01-harness-definitions P03 | 5 | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -63,6 +65,12 @@ Recent decisions affecting current work:
 - [Pre-Phase 1]: 6 phases retained despite coarse granularity setting — the strict architectural dependency chain (spec → runner → eval → runs → dashboard → docs) cannot be compressed without creating unverifiable intermediate states.
 - [Phase 01-harness-definitions]: Used Zod v4 native z.toJSONSchema() — zod-to-json-schema is EOL as of November 2025
 - [Phase 01-harness-definitions]: validate-schemas.ts uses dynamic import loop so Plans 02-04 can drop in schema.ts files without modifying the script
+- [Phase 01-harness-definitions 01-02]: CSV data designed with intentional decision gradient (~7 restock, ~7 borderline, ~6 hold/reduce) to maximize model reasoning differentiation
+- [Phase 01-harness-definitions 01-02]: Rubric completeness dimension explicitly names schema fields (summary, recommendations, data_gaps) — established as pattern for Plans 03-04
+- [Phase 01-harness-definitions]: Financial schema captures nested forecast object (6 sub-fields) to enforce that models commit to specific dollar figures rather than directional statements
+- [Phase 01-harness-definitions]: CSV data deliberately shows margin compression (operating expenses growing faster than revenue) to create meaningful forecasting challenge
+- [Phase 01-harness-definitions]: CSV data designed with contrasting SKU margin/velocity profiles for multi-directional pricing decisions
+- [Phase 01-harness-definitions]: Rubric Completeness dimension references exact schema field names (summary, recommendations, market_observations) for judge alignment
 
 ### Pending Todos
 
@@ -75,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-15T22:22:51.508Z
-Stopped at: Completed 01-harness-definitions-01-PLAN.md
+Last session: 2026-03-15T22:31:21.110Z
+Stopped at: Completed 01-harness-definitions-04-PLAN.md
 Resume file: None
