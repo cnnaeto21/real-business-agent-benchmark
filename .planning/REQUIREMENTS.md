@@ -48,6 +48,7 @@
 - [ ] **DASH-02**: Dashboard shows model comparison table: all models × all harnesses with composite score, cost (USD), latency (ms)
 - [ ] **DASH-03**: Dashboard shows per-dimension score breakdown for each model (bar or radar chart)
 - [ ] **DASH-04**: Dashboard shows run metadata per result: model name+version, run date, harness version, temperature
+- [ ] **DASH-05**: Dashboard has a "Run it yourself" section with copy-paste CLI command and link to `docs/running.md` — equally prominent as the published results
 
 ### Documentation
 
@@ -98,19 +99,47 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| HRNS-01 through HRNS-07 | Phase 1 | Pending |
-| EVAL-02 (judge prompt design) | Phase 1 | Pending |
-| RUN-01 through RUN-06 | Phase 2 | Pending |
-| EVAL-01 through EVAL-07 | Phase 3 | Pending |
-| REF-01 through REF-03 | Phase 4 | Pending |
-| DASH-01 through DASH-04 | Phase 5 | Pending |
-| DOCS-01 through DOCS-05 | Phase 6 | Pending |
+| HRNS-01 | Phase 1 | Pending |
+| HRNS-02 | Phase 1 | Pending |
+| HRNS-03 | Phase 1 | Pending |
+| HRNS-04 | Phase 1 | Pending |
+| HRNS-05 | Phase 1 | Pending |
+| HRNS-06 | Phase 1 | Pending |
+| HRNS-07 | Phase 1 | Pending |
+| EVAL-02 | Phase 1 | Pending |
+| RUN-01 | Phase 2 | Pending |
+| RUN-02 | Phase 2 | Pending |
+| RUN-03 | Phase 2 | Pending |
+| RUN-04 | Phase 2 | Pending |
+| RUN-05 | Phase 2 | Pending |
+| RUN-06 | Phase 2 | Pending |
+| EVAL-01 | Phase 3 | Pending |
+| EVAL-03 | Phase 3 | Pending |
+| EVAL-04 | Phase 3 | Pending |
+| EVAL-05 | Phase 3 | Pending |
+| EVAL-06 | Phase 3 | Pending |
+| EVAL-07 | Phase 3 | Pending |
+| REF-01 | Phase 4 | Pending |
+| REF-02 | Phase 4 | Pending |
+| REF-03 | Phase 4 | Pending |
+| DASH-01 | Phase 5 | Pending |
+| DASH-02 | Phase 5 | Pending |
+| DASH-03 | Phase 5 | Pending |
+| DASH-04 | Phase 5 | Pending |
+| DASH-05 | Phase 5 | Pending |
+| DOCS-01 | Phase 6 | Pending |
+| DOCS-02 | Phase 6 | Pending |
+| DOCS-03 | Phase 6 | Pending |
+| DOCS-04 | Phase 6 | Pending |
+| DOCS-05 | Phase 6 | Pending |
 
 **Coverage:**
-- v1 requirements: 28 total
-- Mapped to phases: 28
-- Unmapped: 0 ✓
+- v1 requirements: 33 total
+- Mapped to phases: 33
+- Unmapped: 0
+
+Note: EVAL-02 (judge prompt design) is assigned to Phase 1, not Phase 3. The judge prompt is a harness artifact that must be locked before the eval engine is built. EVAL-01 and EVAL-03 through EVAL-07 are assigned to Phase 3.
 
 ---
 *Requirements defined: 2026-03-12*
-*Last updated: 2026-03-12 after initial definition*
+*Last updated: 2026-03-12 — traceability expanded to individual requirement rows; corrected count from 28 to 32; EVAL-02 explicitly assigned to Phase 1*
