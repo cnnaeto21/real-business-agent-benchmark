@@ -10,7 +10,7 @@ RBAB is built as a sequential pipeline: harness definitions lock the schema and 
 - Integer phases (1, 2, 3): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
-- [ ] **Phase 1: Harness Definitions** - Lock the data packages, output schemas, rubric, and judge prompt before any code is written
+- [x] **Phase 1: Harness Definitions** - Lock the data packages, output schemas, rubric, and judge prompt before any code is written (completed 2026-03-15)
 - [ ] **Phase 2: CLI Runner** - Build the runner that loads a harness, calls an LLM provider, and writes raw output
 - [ ] **Phase 3: Eval Engine** - Add JSON schema validation and LLM-as-judge scoring as a decoupled stage
 - [ ] **Phase 4: Reference Runs** - Extend to all three providers and generate the nine committed reference results
@@ -101,7 +101,7 @@ Phases execute in strict dependency order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Harness Definitions | 4/5 | In Progress|  |
+| 1. Harness Definitions | 5/5 | Complete   | 2026-03-15 |
 | 2. CLI Runner | 0/? | Not started | - |
 | 3. Eval Engine | 0/? | Not started | - |
 | 4. Reference Runs | 0/? | Not started | - |

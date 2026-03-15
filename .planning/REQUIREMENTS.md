@@ -29,7 +29,7 @@
 ### Eval Engine
 
 - [ ] **EVAL-01**: Eval engine validates raw output against the harness output schema (Zod safeParse) — first scoring gate
-- [ ] **EVAL-02**: Eval engine calls Claude Sonnet (temperature 0) as the fixed LLM judge for all runs regardless of subject model
+- [x] **EVAL-02**: Eval engine calls Claude Sonnet (temperature 0) as the fixed LLM judge for all runs regardless of subject model
 - [ ] **EVAL-03**: Judge scores on 3 dimensions: actionability, reasoning transparency, completeness (each 1-5)
 - [ ] **EVAL-04**: Judge returns structured JSON with score + rationale per dimension
 - [ ] **EVAL-05**: Eval engine computes composite score (unweighted average of dimension scores, normalized 0-100)
@@ -106,7 +106,7 @@
 | HRNS-05 | Phase 1 | Complete |
 | HRNS-06 | Phase 1 | Complete |
 | HRNS-07 | Phase 1 | Complete |
-| EVAL-02 | Phase 1 | Pending |
+| EVAL-02 | Phase 1 | Complete |
 | RUN-01 | Phase 2 | Pending |
 | RUN-02 | Phase 2 | Pending |
 | RUN-03 | Phase 2 | Pending |

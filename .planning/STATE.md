@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-harness-definitions-03-PLAN.md
-last_updated: "2026-03-15T22:31:21.118Z"
-last_activity: "2026-03-15 — Completed 01-02 (inventory-optimization harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
+stopped_at: Completed 01-harness-definitions-05-PLAN.md
+last_updated: "2026-03-15T22:37:38.611Z"
+last_activity: "2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
 progress:
   total_phases: 6
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 5
-  completed_plans: 4
+  completed_plans: 5
   percent: 80
 ---
 
@@ -52,6 +52,7 @@ Progress: [████████░░] 80%
 *Updated after each plan completion*
 | Phase 01-harness-definitions P04 | 3 | 2 tasks | 7 files |
 | Phase 01-harness-definitions P03 | 5 | 2 tasks | 7 files |
+| Phase 01-harness-definitions P05 | 2 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -71,6 +72,9 @@ Recent decisions affecting current work:
 - [Phase 01-harness-definitions]: CSV data deliberately shows margin compression (operating expenses growing faster than revenue) to create meaningful forecasting challenge
 - [Phase 01-harness-definitions]: CSV data designed with contrasting SKU margin/velocity profiles for multi-directional pricing decisions
 - [Phase 01-harness-definitions]: Rubric Completeness dimension references exact schema field names (summary, recommendations, market_observations) for judge alignment
+- [Phase 01-harness-definitions]: Judge prompt v1.0.0 locked — changes require re-scoring all existing reference runs to preserve benchmark reproducibility
+- [Phase 01-harness-definitions]: Judge prompt uses placeholder injection pattern ({{model_output}}, {{rubric}}) so eval engine injects harness-specific content at runtime
+- [Phase 01-harness-definitions]: Three scoring dimensions (actionability, reasoning_transparency, completeness) confirmed consistent across all three harness rubrics and judge prompt output format
 
 ### Pending Todos
 
@@ -83,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-15T22:31:21.110Z
-Stopped at: Completed 01-harness-definitions-04-PLAN.md
+Last session: 2026-03-15T22:37:38.602Z
+Stopped at: Completed 01-harness-definitions-05-PLAN.md
 Resume file: None
