@@ -47,7 +47,13 @@ Plans:
   2. The run manifest at `results/<run-id>/meta.json` contains: model id, provider API version, temperature, max_tokens, input tokens, output tokens, cost USD, latency ms
   3. The runner uses the provider's native structured output mechanism (Anthropic tool use for the Anthropic provider)
   4. The prompt rendered by the runner is deterministic — running the same harness twice produces identical prompt text
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Bootstrap: npm deps, .gitignore, shared TypeScript contracts, Wave 0 test scripts
+- [ ] 02-02-PLAN.md — Core modules: harness loader, cost table, output writer
+- [ ] 02-03-PLAN.md — Provider adapters: Anthropic (tool use), OpenAI (zodResponseFormat), Google (responseMimeType)
+- [ ] 02-04-PLAN.md — Wire: cli.ts orchestration, bin.ts entry point, end-to-end smoke test
 
 ### Phase 3: Eval Engine
 **Goal**: A decoupled eval engine that scores any existing raw output directory without re-running the LLM — enabling rubric changes to be re-applied to old runs
@@ -102,7 +108,7 @@ Phases execute in strict dependency order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Harness Definitions | 5/5 | Complete    | 2026-03-15 |
-| 2. CLI Runner | 0/? | Not started | - |
+| 2. CLI Runner | 0/4 | Not started | - |
 | 3. Eval Engine | 0/? | Not started | - |
 | 4. Reference Runs | 0/? | Not started | - |
 | 5. Dashboard | 0/? | Not started | - |
