@@ -23,7 +23,7 @@
 - [x] **RUN-02**: Runner loads harness spec, injects CSV data into prompt template, and calls the specified LLM provider
 - [x] **RUN-03**: Runner supports three providers: Anthropic (`anthropic/`), OpenAI (`openai/`), Google (`google/`)
 - [x] **RUN-04**: Runner uses each provider's native structured output mechanism (Anthropic tool use, OpenAI json_schema mode, Gemini responseMimeType)
-- [ ] **RUN-05**: Runner writes raw output to `results/<run-id>/raw/<model-slug>.json`
+- [x] **RUN-05**: Runner writes raw output to `results/<run-id>/raw/<model-slug>.json`
 - [x] **RUN-06**: Runner writes run manifest to `results/<run-id>/meta.json` including: model id, provider API version, temperature, max_tokens, input tokens, output tokens, cost USD, latency ms
 
 ### Eval Engine
@@ -111,7 +111,7 @@
 | RUN-02 | Phase 2 | Complete |
 | RUN-03 | Phase 2 | Complete |
 | RUN-04 | Phase 2 | Complete |
-| RUN-05 | Phase 2 | Pending |
+| RUN-05 | Phase 2 | Complete |
 | RUN-06 | Phase 2 | Complete |
 | EVAL-01 | Phase 3 | Pending |
 | EVAL-03 | Phase 3 | Pending |

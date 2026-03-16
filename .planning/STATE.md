@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-cli-runner-03-PLAN.md
-last_updated: "2026-03-16T12:37:52.502Z"
+stopped_at: Completed 02-cli-runner-02-PLAN.md
+last_updated: "2026-03-16T12:38:42.779Z"
 last_activity: "2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
 progress:
   total_phases: 6
@@ -55,6 +55,7 @@ Progress: [████████░░] 80%
 | Phase 01-harness-definitions P05 | 2 | 2 tasks | 1 files |
 | Phase 02-cli-runner P01 | 3 | 3 tasks | 7 files |
 | Phase 02-cli-runner P03 | 8 | 2 tasks | 4 files |
+| Phase 02-cli-runner P02 | 525643 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -82,6 +83,9 @@ Recent decisions affecting current work:
 - [Phase 02-cli-runner]: Provider routing by string prefix (anthropic/, openai/, google/) — explicit dispatch, no registry/map indirection
 - [Phase 02-cli-runner]: Google adapter uses responseJsonSchema (not responseSchema) — since @google/genai v1.9.0, plain JSON Schema objects from z.toJSONSchema() must go in responseJsonSchema; responseSchema expects typed SchemaUnion
 - [Phase 02-cli-runner]: Anthropic adapter implements tool use with tool_choice forced per RUN-04 — not output_config.format, even though native Structured Outputs is now GA
+- [Phase 02-cli-runner]: loadHarness throws on missing separator (not warning) — prevents silent malformed prompts from reaching providers
+- [Phase 02-cli-runner]: calculateCost returns -1 sentinel for unknown models instead of throwing — allows benchmark run to complete with flagged cost
+- [Phase 02-cli-runner]: Placeholder assertion runs post-injection in loadHarness — catches harness authoring errors (YAML/template mismatch) at load time not run time
 
 ### Pending Todos
 
@@ -94,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-16T12:37:52.495Z
-Stopped at: Completed 02-cli-runner-03-PLAN.md
+Last session: 2026-03-16T12:38:42.770Z
+Stopped at: Completed 02-cli-runner-02-PLAN.md
 Resume file: None
