@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-cli-runner-01-PLAN.md
-last_updated: "2026-03-16T12:31:28.458Z"
+stopped_at: Completed 02-cli-runner-03-PLAN.md
+last_updated: "2026-03-16T12:37:52.502Z"
 last_activity: "2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
 progress:
   total_phases: 6
   completed_phases: 1
   total_plans: 9
-  completed_plans: 6
+  completed_plans: 8
   percent: 80
 ---
 
@@ -54,6 +54,7 @@ Progress: [████████░░] 80%
 | Phase 01-harness-definitions P03 | 5 | 2 tasks | 7 files |
 | Phase 01-harness-definitions P05 | 2 | 2 tasks | 1 files |
 | Phase 02-cli-runner P01 | 3 | 3 tasks | 7 files |
+| Phase 02-cli-runner P03 | 8 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -79,6 +80,8 @@ Recent decisions affecting current work:
 - [Phase 02-cli-runner]: zodSchema typed as unknown in RunOptions to avoid forcing zod import in shared contracts file
 - [Phase 02-cli-runner]: Wave 0 tests use Node built-in assert (no framework) — simpler, no additional dependencies
 - [Phase 02-cli-runner]: Provider routing by string prefix (anthropic/, openai/, google/) — explicit dispatch, no registry/map indirection
+- [Phase 02-cli-runner]: Google adapter uses responseJsonSchema (not responseSchema) — since @google/genai v1.9.0, plain JSON Schema objects from z.toJSONSchema() must go in responseJsonSchema; responseSchema expects typed SchemaUnion
+- [Phase 02-cli-runner]: Anthropic adapter implements tool use with tool_choice forced per RUN-04 — not output_config.format, even though native Structured Outputs is now GA
 
 ### Pending Todos
 
@@ -91,6 +94,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-16T12:31:28.451Z
-Stopped at: Completed 02-cli-runner-01-PLAN.md
+Last session: 2026-03-16T12:37:52.495Z
+Stopped at: Completed 02-cli-runner-03-PLAN.md
 Resume file: None
