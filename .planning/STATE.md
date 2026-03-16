@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-harness-definitions-05-PLAN.md
-last_updated: "2026-03-15T22:43:01.449Z"
+stopped_at: Completed 02-cli-runner-01-PLAN.md
+last_updated: "2026-03-16T12:31:28.458Z"
 last_activity: "2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
 progress:
   total_phases: 6
   completed_phases: 1
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 9
+  completed_plans: 6
   percent: 80
 ---
 
@@ -53,6 +53,7 @@ Progress: [████████░░] 80%
 | Phase 01-harness-definitions P04 | 3 | 2 tasks | 7 files |
 | Phase 01-harness-definitions P03 | 5 | 2 tasks | 7 files |
 | Phase 01-harness-definitions P05 | 2 | 2 tasks | 1 files |
+| Phase 02-cli-runner P01 | 3 | 3 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,9 @@ Recent decisions affecting current work:
 - [Phase 01-harness-definitions]: Judge prompt v1.0.0 locked — changes require re-scoring all existing reference runs to preserve benchmark reproducibility
 - [Phase 01-harness-definitions]: Judge prompt uses placeholder injection pattern ({{model_output}}, {{rubric}}) so eval engine injects harness-specific content at runtime
 - [Phase 01-harness-definitions]: Three scoring dimensions (actionability, reasoning_transparency, completeness) confirmed consistent across all three harness rubrics and judge prompt output format
+- [Phase 02-cli-runner]: zodSchema typed as unknown in RunOptions to avoid forcing zod import in shared contracts file
+- [Phase 02-cli-runner]: Wave 0 tests use Node built-in assert (no framework) — simpler, no additional dependencies
+- [Phase 02-cli-runner]: Provider routing by string prefix (anthropic/, openai/, google/) — explicit dispatch, no registry/map indirection
 
 ### Pending Todos
 
@@ -87,6 +91,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-15T22:37:38.602Z
-Stopped at: Completed 01-harness-definitions-05-PLAN.md
+Last session: 2026-03-16T12:31:28.451Z
+Stopped at: Completed 02-cli-runner-01-PLAN.md
 Resume file: None
