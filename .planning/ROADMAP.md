@@ -64,7 +64,12 @@ Plans:
   2. Valid outputs are scored by Claude Sonnet at temperature 0 on three dimensions (actionability, reasoning transparency, completeness), each returning a score 1-5 and a rationale
   3. The scored result is written to `results/<run-id>/scored/<model-slug>.json` with composite score (unweighted average, normalized 0-100)
   4. `results/index.json` is updated after each eval run and contains all results in a shape the dashboard can consume
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Wave 0 test scaffold: scripts/test-eval.ts covering all EVAL requirements
+- [ ] 03-02-PLAN.md — Core eval engine: src/eval.ts (validation, judge call, scoring, file writes)
+- [ ] 03-03-PLAN.md — CLI integration: wire runEval into cli.ts, --skip-eval flag, inline score printing
 
 ### Phase 4: Reference Runs
 **Goal**: Nine scored reference results committed to git — 3 harnesses times 3 models — providing the public baseline the dashboard will display
@@ -109,7 +114,7 @@ Phases execute in strict dependency order: 1 → 2 → 3 → 4 → 5 → 6
 |-------|----------------|--------|-----------|
 | 1. Harness Definitions | 5/5 | Complete    | 2026-03-15 |
 | 2. CLI Runner | 4/4 | Complete   | 2026-03-16 |
-| 3. Eval Engine | 0/? | Not started | - |
+| 3. Eval Engine | 0/3 | Not started | - |
 | 4. Reference Runs | 0/? | Not started | - |
 | 5. Dashboard | 0/? | Not started | - |
 | 6. Documentation and Launch | 0/? | Not started | - |
