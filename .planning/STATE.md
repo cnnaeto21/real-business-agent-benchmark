@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-eval-engine-02-PLAN.md
-last_updated: "2026-03-17T00:54:22.114Z"
+stopped_at: "Completed 03-eval-engine-03-PLAN.md (checkpoint:human-verify pending)"
+last_updated: "2026-03-17T00:58:20.443Z"
 last_activity: "2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
 progress:
   total_phases: 6
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 12
-  completed_plans: 11
+  completed_plans: 12
   percent: 80
 ---
 
@@ -60,6 +60,7 @@ Progress: [████████░░] 80%
 | Phase 02-cli-runner P04 | 5 | 2 tasks | 2 files |
 | Phase 03-eval-engine P01 | 3 | 1 tasks | 1 files |
 | Phase 03-eval-engine P02 | 3 | 1 tasks | 1 files |
+| Phase 03-eval-engine P03 | 1 | 1 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -99,6 +100,8 @@ Recent decisions affecting current work:
 - [Phase 03-eval-engine]: Judge called in plain text messages.create (no tools) — judge prompt instructs JSON-only output; Zod validation applied on parsed text
 - [Phase 03-eval-engine]: Schema validation failure writes zero-score ScoredResult to scored/ and index.json; judge is never called on invalid output
 - [Phase 03-eval-engine]: Judge API failure: catch error, log to stderr, return without writing scored/ — preserves raw output from expensive model run
+- [Phase 03-eval-engine]: --skip-eval flag (not --no-eval) used to avoid Commander v14 --no-* boolean negation footgun — no --eval flag exists so --no-eval would silently misbehave
+- [Phase 03-eval-engine]: calculateCost recomputed in cli.ts for runEval meta rather than threading from output.ts — keeps interface boundaries clean
 
 ### Pending Todos
 
@@ -111,6 +114,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-17T00:54:13.518Z
-Stopped at: Completed 03-eval-engine-02-PLAN.md
+Last session: 2026-03-17T00:58:20.434Z
+Stopped at: Completed 03-eval-engine-03-PLAN.md (checkpoint:human-verify pending)
 Resume file: None
