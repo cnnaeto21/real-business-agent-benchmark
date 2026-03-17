@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-eval-engine-03-PLAN.md
-last_updated: "2026-03-17T02:04:33.895Z"
+stopped_at: Completed 03-eval-engine-04-PLAN.md
+last_updated: "2026-03-17T12:59:53.075Z"
 last_activity: "2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
 progress:
   total_phases: 6
   completed_phases: 3
-  total_plans: 12
-  completed_plans: 12
+  total_plans: 13
+  completed_plans: 13
   percent: 80
 ---
 
@@ -62,6 +62,7 @@ Progress: [████████░░] 80%
 | Phase 03-eval-engine P02 | 3 | 1 tasks | 1 files |
 | Phase 03-eval-engine P03 | 1 | 1 tasks | 3 files |
 | Phase 03-eval-engine P03 | 10 | 2 tasks | 3 files |
+| Phase 03-eval-engine P04 | 2 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -104,6 +105,9 @@ Recent decisions affecting current work:
 - [Phase 03-eval-engine]: --skip-eval flag (not --no-eval) used to avoid Commander v14 --no-* boolean negation footgun — no --eval flag exists so --no-eval would silently misbehave
 - [Phase 03-eval-engine]: calculateCost recomputed in cli.ts for runEval meta rather than threading from output.ts — keeps interface boundaries clean
 - [Phase 03-eval-engine]: Judge JSON response wrapped in markdown code fences by model in practice — strip fences before JSON.parse in callJudge (auto-fixed, commit 31ef007)
+- [Phase 03-eval-engine]: Re-eval accepts only --run-id; all other metadata recovered from meta.json — single source of truth
+- [Phase 03-eval-engine]: loadHarness called fresh at re-eval time (not stored spec) — enables rubric changes to be applied to old runs without re-invoking LLM
+- [Phase 03-eval-engine]: No Commander in re-eval.ts — single --run-id flag handled with manual argv parsing to keep script minimal
 
 ### Pending Todos
 
@@ -116,6 +120,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-17T02:04:33.888Z
-Stopped at: Completed 03-eval-engine-03-PLAN.md
+Last session: 2026-03-17T12:59:53.068Z
+Stopped at: Completed 03-eval-engine-04-PLAN.md
 Resume file: None
