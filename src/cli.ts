@@ -4,6 +4,8 @@ import { z } from "zod";
 import { loadHarness, splitPrompt } from "./harness.ts";
 import { runProvider } from "./providers/index.ts";
 import { writeResults } from "./output.ts";
+import { runEval } from "./eval.ts";
+import { calculateCost } from "./cost.ts";
 import type { BenchmarkOptions } from "./types.ts";
 
 async function loadHarnessSchema(harnessName: string): Promise<{ zodSchema: z.ZodType; jsonSchema: object }> {
@@ -72,4 +74,21 @@ export async function runBenchmark(opts: BenchmarkOptions): Promise<void> {
   console.log(`\nRun complete: ${runDir}`);
   console.log(`  Tokens:  ${result.inputTokens} in / ${result.outputTokens} out`);
   console.log(`  Latency: ${latencyMs}ms`);
+
+  // 7. Score the output unless --skip-eval was passed
+  if (!opts.noEval) {
+    await runEval({
+      runDir,
+      runId,
+      harnessName: spec.name,
+      rawOutput: result.rawOutput,
+      modelSlug,
+      spec,
+      meta: {
+        cost_usd: calculateCost(opts.model, result.inputTokens, result.outputTokens),
+        latency_ms: latencyMs,
+        run_date: new Date().toISOString(),
+      },
+    });
+  }
 }

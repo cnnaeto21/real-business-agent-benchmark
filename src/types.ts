@@ -45,4 +45,5 @@ export interface BenchmarkOptions {
   model: string;      // e.g. "anthropic/claude-sonnet-4-6"
   temperature: number;
   maxTokens: number;
+  noEval?: boolean;   // if true, skip eval scoring for this run
 }

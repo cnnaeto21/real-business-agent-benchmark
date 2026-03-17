@@ -11,6 +11,7 @@ program
   .requiredOption("--model <provider/model-id>", "Model string (e.g. anthropic/claude-sonnet-4-6)")
   .option("--temperature <number>", "Sampling temperature (default: 0)", "0")
   .option("--max-tokens <number>", "Max output tokens (default: 4096)", "4096")
+  .option("--skip-eval", "Skip scoring (raw output and meta.json still written)")
   .action(async (options) => {
     try {
       await runBenchmark({
@@ -18,6 +19,7 @@ program
         model: options.model,
         temperature: parseFloat(options.temperature),
         maxTokens: parseInt(options.maxTokens, 10),
+        noEval: !!options.skipEval,
       });
     } catch (err) {
       console.error("Benchmark failed:", err instanceof Error ? err.message : err);
