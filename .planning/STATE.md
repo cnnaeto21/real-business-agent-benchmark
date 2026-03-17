@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: "Completed 03-eval-engine-03-PLAN.md (checkpoint:human-verify pending)"
-last_updated: "2026-03-17T00:58:20.443Z"
+stopped_at: Completed 03-eval-engine-03-PLAN.md
+last_updated: "2026-03-17T02:04:33.895Z"
 last_activity: "2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
 progress:
   total_phases: 6
@@ -61,6 +61,7 @@ Progress: [████████░░] 80%
 | Phase 03-eval-engine P01 | 3 | 1 tasks | 1 files |
 | Phase 03-eval-engine P02 | 3 | 1 tasks | 1 files |
 | Phase 03-eval-engine P03 | 1 | 1 tasks | 3 files |
+| Phase 03-eval-engine P03 | 10 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -102,6 +103,7 @@ Recent decisions affecting current work:
 - [Phase 03-eval-engine]: Judge API failure: catch error, log to stderr, return without writing scored/ — preserves raw output from expensive model run
 - [Phase 03-eval-engine]: --skip-eval flag (not --no-eval) used to avoid Commander v14 --no-* boolean negation footgun — no --eval flag exists so --no-eval would silently misbehave
 - [Phase 03-eval-engine]: calculateCost recomputed in cli.ts for runEval meta rather than threading from output.ts — keeps interface boundaries clean
+- [Phase 03-eval-engine]: Judge JSON response wrapped in markdown code fences by model in practice — strip fences before JSON.parse in callJudge (auto-fixed, commit 31ef007)
 
 ### Pending Todos
 
@@ -114,6 +116,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-17T00:58:20.434Z
-Stopped at: Completed 03-eval-engine-03-PLAN.md (checkpoint:human-verify pending)
+Last session: 2026-03-17T02:04:33.888Z
+Stopped at: Completed 03-eval-engine-03-PLAN.md
 Resume file: None

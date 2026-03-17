@@ -34,6 +34,7 @@ key-files:
 key-decisions:
   - "--skip-eval flag name (not --no-eval) — Commander v14 treats --no-* as boolean negation of an existing --* flag; no --eval flag exists so --no-eval silently misbehaves"
   - "calculateCost imported directly in cli.ts and recomputed for runEval meta rather than threading it from output.ts — keeps interfaces clean"
+  - "Judge JSON response wrapped in markdown code fences by model in practice — strip fences before JSON.parse in callJudge (auto-fixed, commit 31ef007)"
 
 patterns-established:
   - "Pattern: CLI flag -> BenchmarkOptions field naming: skip-eval (kebab) -> skipEval (Commander) -> noEval (opts) — consistent cross-boundary naming"
@@ -54,7 +55,7 @@ completed: 2026-03-17
 - **Duration:** 1 min
 - **Started:** 2026-03-17T00:55:49Z
 - **Completed:** 2026-03-17T00:57:03Z
-- **Tasks:** 1 of 2 (Task 2 is a human-verify checkpoint — awaiting user verification)
+- **Tasks:** 2 of 2 (Task 1 auto, Task 2 human-verify checkpoint — approved)
 - **Files modified:** 3
 
 ## Accomplishments
@@ -68,6 +69,11 @@ completed: 2026-03-17
 Each task was committed atomically:
 
 1. **Task 1: Add noEval to types.ts, --skip-eval to bin.ts, wire runEval in cli.ts** - `b0b8b4b` (feat)
+2. **Task 2: Checkpoint — verify live eval pipeline end-to-end** - human approved (no code commit)
+
+**Bug fix (deviation):** `31ef007` (fix: strip markdown code fences in callJudge)
+
+**Plan metadata:** `52d8442` (docs: checkpoint pause commit)
 
 ## Files Created/Modified
 - `src/types.ts` — Added `noEval?: boolean` field to `BenchmarkOptions`
@@ -80,18 +86,32 @@ Each task was committed atomically:
 
 ## Deviations from Plan
 
-None - plan executed exactly as written.
+### Auto-fixed Issues
+
+**1. [Rule 1 - Bug] Strip markdown code fences before JSON.parse in callJudge**
+- **Found during:** Task 2 — live end-to-end verification (human-verify checkpoint)
+- **Issue:** The Anthropic judge model returned JSON wrapped in markdown code fences (` ```json ... ``` `) despite prompt instructions to return plain JSON. This caused `JSON.parse` to throw a SyntaxError.
+- **Fix:** Added fence-stripping logic in `callJudge` in `src/eval.ts` before the `JSON.parse` call
+- **Files modified:** `src/eval.ts`
+- **Verification:** Live benchmark run completed successfully; inline scores printed; `scored/` file created; `index.json` updated
+- **Committed in:** `31ef007` (standalone fix commit)
+
+---
+
+**Total deviations:** 1 auto-fixed (Rule 1 — bug)
+**Impact on plan:** Fix necessary for correctness — LLMs commonly wrap JSON in code fences even when instructed not to. No scope creep.
 
 ## Issues Encountered
-None.
+- Judge model returned JSON in markdown code fences despite instructions. Fixed inline in `callJudge` before JSON parse step. This is a known LLM behavior with plain-text message requests.
 
 ## User Setup Required
-None - no external service configuration required for code changes.
+None - no external service configuration required beyond `ANTHROPIC_API_KEY` already set for live runs.
 
 ## Next Phase Readiness
-- Task 1 complete: all three source files modified and committed
-- Task 2 is a blocking `checkpoint:human-verify` — requires live benchmark run to confirm inline scores print, `scored/` file is created, `index.json` is updated, and `--skip-eval` produces no `scored/` directory
-- ANTHROPIC_API_KEY must be set in environment before running live verification
+- Eval pipeline fully operational and live-verified end-to-end
+- Phase 04 (reference runs) can run `benchmark --harness <name> --model <model>` and get reproducible scored output
+- `results/index.json` accumulates run entries for Phase 05 (dashboard)
+- `--skip-eval` available for rapid iteration without judge API cost
 
 ---
 *Phase: 03-eval-engine*
