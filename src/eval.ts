@@ -126,7 +126,9 @@ async function callJudge(judgePrompt: string, judgeModel: string): Promise<Judge
 
     let parsed: unknown;
     try {
-      parsed = JSON.parse(textBlock.text);
+      // Strip markdown code fences that models sometimes wrap JSON in
+      const text = textBlock.text.trim().replace(/^```(?:json)?\n?/, "").replace(/\n?```$/, "");
+      parsed = JSON.parse(text);
     } catch {
       return null;
     }
