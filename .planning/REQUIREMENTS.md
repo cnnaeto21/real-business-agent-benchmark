@@ -28,13 +28,13 @@
 
 ### Eval Engine
 
-- [ ] **EVAL-01**: Eval engine validates raw output against the harness output schema (Zod safeParse) — first scoring gate
+- [x] **EVAL-01**: Eval engine validates raw output against the harness output schema (Zod safeParse) — first scoring gate
 - [x] **EVAL-02**: Eval engine calls Claude Sonnet (temperature 0) as the fixed LLM judge for all runs regardless of subject model
-- [ ] **EVAL-03**: Judge scores on 3 dimensions: actionability, reasoning transparency, completeness (each 1-5)
-- [ ] **EVAL-04**: Judge returns structured JSON with score + rationale per dimension
-- [ ] **EVAL-05**: Eval engine computes composite score (unweighted average of dimension scores, normalized 0-100)
-- [ ] **EVAL-06**: Eval engine writes scored result to `results/<run-id>/scored/<model-slug>.json`
-- [ ] **EVAL-07**: Eval engine updates `results/index.json` after each run
+- [x] **EVAL-03**: Judge scores on 3 dimensions: actionability, reasoning transparency, completeness (each 1-5)
+- [x] **EVAL-04**: Judge returns structured JSON with score + rationale per dimension
+- [x] **EVAL-05**: Eval engine computes composite score (unweighted average of dimension scores, normalized 0-100)
+- [x] **EVAL-06**: Eval engine writes scored result to `results/<run-id>/scored/<model-slug>.json`
+- [x] **EVAL-07**: Eval engine updates `results/index.json` after each run
 
 ### Reference Results
 
@@ -113,12 +113,12 @@
 | RUN-04 | Phase 2 | Complete |
 | RUN-05 | Phase 2 | Complete |
 | RUN-06 | Phase 2 | Complete |
-| EVAL-01 | Phase 3 | Pending |
-| EVAL-03 | Phase 3 | Pending |
-| EVAL-04 | Phase 3 | Pending |
-| EVAL-05 | Phase 3 | Pending |
-| EVAL-06 | Phase 3 | Pending |
-| EVAL-07 | Phase 3 | Pending |
+| EVAL-01 | Phase 3 | Complete |
+| EVAL-03 | Phase 3 | Complete |
+| EVAL-04 | Phase 3 | Complete |
+| EVAL-05 | Phase 3 | Complete |
+| EVAL-06 | Phase 3 | Complete |
+| EVAL-07 | Phase 3 | Complete |
 | REF-01 | Phase 4 | Pending |
 | REF-02 | Phase 4 | Pending |
 | REF-03 | Phase 4 | Pending |
