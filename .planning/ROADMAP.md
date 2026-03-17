@@ -12,7 +12,7 @@ RBAB is built as a sequential pipeline: harness definitions lock the schema and 
 
 - [x] **Phase 1: Harness Definitions** - Lock the data packages, output schemas, rubric, and judge prompt before any code is written (completed 2026-03-15)
 - [x] **Phase 2: CLI Runner** - Build the runner that loads a harness, calls an LLM provider, and writes raw output (completed 2026-03-16)
-- [x] **Phase 3: Eval Engine** - Add JSON schema validation and LLM-as-judge scoring as a decoupled stage (completed 2026-03-17)
+- [ ] **Phase 3: Eval Engine** - Add JSON schema validation and LLM-as-judge scoring as a decoupled stage (gap closure in progress)
 - [ ] **Phase 4: Reference Runs** - Extend to all three providers and generate the nine committed reference results
 - [ ] **Phase 5: Dashboard** - Build and deploy the static Next.js results site against real result data
 - [ ] **Phase 6: Documentation and Launch** - Write methodology docs, LIMITATIONS.md, and verify end-to-end reproducibility
@@ -64,12 +64,13 @@ Plans:
   2. Valid outputs are scored by Claude Sonnet at temperature 0 on three dimensions (actionability, reasoning transparency, completeness), each returning a score 1-5 and a rationale
   3. The scored result is written to `results/<run-id>/scored/<model-slug>.json` with composite score (unweighted average, normalized 0-100)
   4. `results/index.json` is updated after each eval run and contains all results in a shape the dashboard can consume
-**Plans**: 3 plans
+**Plans**: 4 plans
 
 Plans:
 - [ ] 03-01-PLAN.md — Wave 0 test scaffold: scripts/test-eval.ts covering all EVAL requirements
 - [ ] 03-02-PLAN.md — Core eval engine: src/eval.ts (validation, judge call, scoring, file writes)
 - [ ] 03-03-PLAN.md — CLI integration: wire runEval into cli.ts, --skip-eval flag, inline score printing
+- [ ] 03-04-PLAN.md — Gap closure: scripts/re-eval.ts standalone re-score entry point
 
 ### Phase 4: Reference Runs
 **Goal**: Nine scored reference results committed to git — 3 harnesses times 3 models — providing the public baseline the dashboard will display
@@ -114,7 +115,7 @@ Phases execute in strict dependency order: 1 → 2 → 3 → 4 → 5 → 6
 |-------|----------------|--------|-----------|
 | 1. Harness Definitions | 5/5 | Complete    | 2026-03-15 |
 | 2. CLI Runner | 4/4 | Complete   | 2026-03-16 |
-| 3. Eval Engine | 3/3 | Complete   | 2026-03-17 |
+| 3. Eval Engine | 3/4 | Gap closure | 2026-03-17 |
 | 4. Reference Runs | 0/? | Not started | - |
 | 5. Dashboard | 0/? | Not started | - |
 | 6. Documentation and Launch | 0/? | Not started | - |
