@@ -38,9 +38,9 @@
 
 ### Reference Results
 
-- [ ] **REF-01**: Nine reference runs exist and are committed to git: 3 harnesses × 3 models (Claude Sonnet, GPT-4o, Gemini 1.5 Pro)
-- [ ] **REF-02**: All reference runs include full run manifest (model version, date, temperature, tokens, cost)
-- [ ] **REF-03**: Judge prompt used for all reference runs is published in the repo at `docs/judge-prompt.md`
+- [x] **REF-01**: Nine reference runs exist and are committed to git: 3 harnesses × 3 models (Claude Sonnet, GPT-4o, Gemini 1.5 Pro)
+- [x] **REF-02**: All reference runs include full run manifest (model version, date, temperature, tokens, cost)
+- [x] **REF-03**: Judge prompt used for all reference runs is published in the repo at `docs/judge-prompt.md`
 
 ### Results Dashboard
 
@@ -119,9 +119,9 @@
 | EVAL-05 | Phase 3 | Complete |
 | EVAL-06 | Phase 3 | Complete |
 | EVAL-07 | Phase 3 | Complete |
-| REF-01 | Phase 4 | Pending |
-| REF-02 | Phase 4 | Pending |
-| REF-03 | Phase 4 | Pending |
+| REF-01 | Phase 4 | Complete |
+| REF-02 | Phase 4 | Complete |
+| REF-03 | Phase 4 | Complete |
 | DASH-01 | Phase 5 | Pending |
 | DASH-02 | Phase 5 | Pending |
 | DASH-03 | Phase 5 | Pending |
