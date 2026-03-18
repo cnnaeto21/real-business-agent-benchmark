@@ -81,7 +81,11 @@ Plans:
   2. Every run manifest includes model name, model version, run date, harness version, temperature, token counts, and cost in USD
   3. `docs/judge-prompt.md` is committed and matches the judge prompt used for all nine reference runs
   4. `results/index.json` is fully populated and all nine entries are readable by the Next.js dashboard at build time
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Orchestration scripts: scripts/run-reference.ts, scripts/verify-reference.ts, package.json script entries
+- [ ] 04-02-PLAN.md — Execute reference runs: pre-flight, run 9 benchmarks, atomic git commit
 
 ### Phase 5: Dashboard
 **Goal**: A publicly accessible static dashboard on Vercel showing model comparison scores, per-dimension breakdowns, and run metadata — built against real reference data
@@ -116,6 +120,6 @@ Phases execute in strict dependency order: 1 → 2 → 3 → 4 → 5 → 6
 | 1. Harness Definitions | 5/5 | Complete    | 2026-03-15 |
 | 2. CLI Runner | 4/4 | Complete   | 2026-03-16 |
 | 3. Eval Engine | 4/4 | Complete   | 2026-03-17 |
-| 4. Reference Runs | 0/? | Not started | - |
+| 4. Reference Runs | 0/2 | Not started | - |
 | 5. Dashboard | 0/? | Not started | - |
 | 6. Documentation and Launch | 0/? | Not started | - |
