@@ -118,9 +118,16 @@ async function main(): Promise<void> {
   }
 }
 
-try {
-  await main();
-} catch (err) {
-  console.error("verify-reference error:", err instanceof Error ? err.message : String(err));
-  process.exit(1);
+// Only run main() when invoked directly (not when imported as a module)
+// ESM guard: import.meta.url matches process.argv[1] when run directly via tsx
+const isMain = process.argv[1]?.endsWith("verify-reference.ts") ||
+  process.argv[1]?.endsWith("verify-reference.js");
+
+if (isMain) {
+  try {
+    await main();
+  } catch (err) {
+    console.error("verify-reference error:", err instanceof Error ? err.message : String(err));
+    process.exit(1);
+  }
 }
