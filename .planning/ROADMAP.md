@@ -125,5 +125,5 @@ Phases execute in strict dependency order: 1 → 2 → 3 → 4 → 5 → 6
 | 2. CLI Runner | 4/4 | Complete   | 2026-03-16 |
 | 3. Eval Engine | 4/4 | Complete   | 2026-03-17 |
 | 4. Reference Runs | 0/2 | Not started | - |
-| 5. Dashboard | 0/2 | Not started | - |
+| 5. Dashboard | 1/2 | In Progress|  |
 | 6. Documentation and Launch | 0/? | Not started | - |
