@@ -1,0 +1,25 @@
+{
+  "run_id": "1f45174b-4fd7-4a25-ae90-312c193779c4",
+  "harness": "pricing-strategy",
+  "harness_version": "1.0.0",
+  "model": "openai/gpt-4o-mini",
+  "composite_score": 67,
+  "scores": {
+    "actionability": {
+      "score": 5,
+      "rationale": "Every recommendation specifies an exact recommended_price (e.g., $1.69 for DRINK-COLA-12OZ, $2.49 for SNACK-JERKY-1OZ), a direction (increase/decrease), and a confidence rating (high/medium), meeting all criteria for immediate POS implementation."
+    },
+    "reasoning_transparency": {
+      "score": 2,
+      "rationale": "Rationale fields reference some data values (e.g., '182 units sold', 'average price was $1.49') but never cite cost_per_unit, calculate actual margin percentages, or show how specific margin figures support the recommended price change, falling between generic category references and full quantitative tracing."
+    },
+    "completeness": {
+      "score": 3,
+      "rationale": "All three required schema fields are present and populated, but the summary restates individual SKU observations rather than synthesizing systemic patterns, and market_observations contain mostly generic statements (e.g., 'beverages have higher sales volumes') without cross-catalog patterns like margin differentials between categories or price-change frequency correlations grounded in specific data."
+    }
+  },
+  "schema_valid": true,
+  "cost_usd": 0.00054015,
+  "latency_ms": 15061,
+  "run_date": "2026-03-19T23:59:27.390Z"
+}

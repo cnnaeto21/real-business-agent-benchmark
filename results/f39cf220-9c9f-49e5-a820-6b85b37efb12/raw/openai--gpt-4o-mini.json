@@ -1,0 +1,48 @@
+{
+  "summary": "The inventory shows several products below their par levels, indicating a need for immediate restocking. The most critical items are the Energy Drink, Candy Mix, and Cola, which are either out of stock or dangerously low. Immediate action is required to prevent stockouts and ensure customer satisfaction.",
+  "recommendations": [
+    {
+      "sku": "DRINK-ENERGY-8OZ",
+      "action": "restock",
+      "quantity": 12,
+      "rationale": "Current stock is 0 with a 7-day velocity of 8 units, indicating immediate restock is necessary to meet demand.",
+      "urgency": "immediate"
+    },
+    {
+      "sku": "DRINK-COLA-12OZ",
+      "action": "restock",
+      "quantity": 16,
+      "rationale": "Current stock is 4 with a 7-day velocity of 12 units, indicating a need to restock to meet demand before running out.",
+      "urgency": "immediate"
+    },
+    {
+      "sku": "SNACK-CANDY-15OZ",
+      "action": "restock",
+      "quantity": 11,
+      "rationale": "Current stock is 1 with a 7-day velocity of 10 units, indicating immediate restock is necessary to avoid stockout.",
+      "urgency": "immediate"
+    },
+    {
+      "sku": "DRINK-WATER-16OZ",
+      "action": "restock",
+      "quantity": 22,
+      "rationale": "Current stock is 2 with a 7-day velocity of 14 units, indicating a need to restock to meet demand before running out.",
+      "urgency": "this-week"
+    },
+    {
+      "sku": "SNACK-CRACKER-2OZ",
+      "action": "hold",
+      "quantity": 0,
+      "rationale": "Current stock is 3 with a 7-day velocity of 9 units, which is sufficient for the next week, so no immediate action is needed.",
+      "urgency": "next-cycle"
+    },
+    {
+      "sku": "SNACK-PRETZEL-1OZ",
+      "action": "restock",
+      "quantity": 10,
+      "rationale": "Current stock is 30 but with a low velocity of 2 units, a slight reduction in order quantity is recommended to avoid overstocking.",
+      "urgency": "next-cycle"
+    }
+  ],
+  "data_gaps": []
+}

@@ -1,0 +1,101 @@
+{
+  "summary": "The inventory is currently experiencing critical stockouts in high-velocity items like Energy 8oz, Candy Mix, and Iced Coffee, which are all below par and depleting rapidly. Several items, specifically Mixed Nuts, Pretzels, and Sparkling Water, are overstocked relative to their 7-day velocity and should be monitored to prevent spoilage or capital tie-up. Immediate restocking is required for 11 SKUs to maintain service levels.",
+  "recommendations": [
+    {
+      "sku": "DRINK-COLA-12OZ",
+      "action": "restock",
+      "quantity": 16,
+      "rationale": "Current stock of 4 is below par of 20; at 1.7 units/day velocity, stock will last less than 3 days.",
+      "urgency": "immediate"
+    },
+    {
+      "sku": "DRINK-WATER-16OZ",
+      "action": "restock",
+      "quantity": 22,
+      "rationale": "Critical stock level of 2; at 2 units/day velocity, stock will be depleted in 1 day.",
+      "urgency": "immediate"
+    },
+    {
+      "sku": "DRINK-ENERGY-8OZ",
+      "action": "restock",
+      "quantity": 12,
+      "rationale": "Out of stock; velocity of 1.14 units/day indicates high demand.",
+      "urgency": "immediate"
+    },
+    {
+      "sku": "SNACK-CRACKER-2OZ",
+      "action": "restock",
+      "quantity": 13,
+      "rationale": "Current stock of 3 is well below par of 16; at 1.28 units/day velocity, stock will last 2 days.",
+      "urgency": "immediate"
+    },
+    {
+      "sku": "SNACK-CANDY-15OZ",
+      "action": "restock",
+      "quantity": 11,
+      "rationale": "Critical stock level of 1; at 1.4 units/day velocity, stock will be depleted in less than 1 day.",
+      "urgency": "immediate"
+    },
+    {
+      "sku": "DRINK-SPORT-20OZ",
+      "action": "restock",
+      "quantity": 14,
+      "rationale": "Current stock of 6 is below par of 20; at 1.57 units/day velocity, stock will last 4 days.",
+      "urgency": "this-week"
+    },
+    {
+      "sku": "DRINK-LEMONADE-12OZ",
+      "action": "restock",
+      "quantity": 13,
+      "rationale": "Current stock of 3 is below par of 16; at 1.14 units/day velocity, stock will last 3 days.",
+      "urgency": "immediate"
+    },
+    {
+      "sku": "DRINK-COFFEE-8OZ",
+      "action": "restock",
+      "quantity": 13,
+      "rationale": "Current stock of 5 is below par of 18; at 1.85 units/day velocity, stock will last 3 days.",
+      "urgency": "immediate"
+    },
+    {
+      "sku": "SNACK-FRUIT-2OZ",
+      "action": "restock",
+      "quantity": 8,
+      "rationale": "Current stock of 2 is below par of 10; at 0.4 units/day velocity, stock will last 5 days.",
+      "urgency": "this-week"
+    },
+    {
+      "sku": "DRINK-KOMBUCHA-12OZ",
+      "action": "restock",
+      "quantity": 7,
+      "rationale": "Critical stock level of 1; at 1 unit/day velocity, stock will be depleted in 1 day.",
+      "urgency": "immediate"
+    },
+    {
+      "sku": "SNACK-NUT-1OZ",
+      "action": "reduce",
+      "quantity": 0,
+      "rationale": "Current stock of 25 exceeds par of 20; velocity is low at 0.4 units/day.",
+      "urgency": "next-cycle"
+    },
+    {
+      "sku": "SNACK-PRETZEL-1OZ",
+      "action": "reduce",
+      "quantity": 0,
+      "rationale": "Current stock of 30 significantly exceeds par of 20; very low velocity of 0.28 units/day.",
+      "urgency": "next-cycle"
+    },
+    {
+      "sku": "DRINK-WATER-SPARKLING-16OZ",
+      "action": "reduce",
+      "quantity": 0,
+      "rationale": "Current stock of 28 exceeds par of 20; velocity is low at 0.57 units/day.",
+      "urgency": "next-cycle"
+    }
+  ],
+  "data_gaps": [
+    "Expiration dates for perishable items",
+    "Machine capacity limits per SKU slot",
+    "Retail price per unit to calculate margin and profitability"
+  ]
+}

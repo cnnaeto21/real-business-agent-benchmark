@@ -1,0 +1,14 @@
+{
+  "run_id": "ca7c4515-6d72-4edc-bfdd-9fd2ced72a89",
+  "harness": "pricing-strategy",
+  "harness_version": "1.0.0",
+  "model": "google/gemini-3.1-flash-lite-preview",
+  "provider_api_version": "gemini-api-v1beta",
+  "temperature": 0,
+  "max_tokens": 8192,
+  "input_tokens": 1478,
+  "output_tokens": 674,
+  "cost_usd": 0.0004174,
+  "latency_ms": 3603,
+  "run_date": "2026-03-19T23:59:38.016Z"
+}

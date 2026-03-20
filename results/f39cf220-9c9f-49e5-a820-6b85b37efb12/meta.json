@@ -1,0 +1,14 @@
+{
+  "run_id": "f39cf220-9c9f-49e5-a820-6b85b37efb12",
+  "harness": "inventory-optimization",
+  "harness_version": "1.0.0",
+  "model": "openai/gpt-4o-mini",
+  "provider_api_version": "openai-chat-completions-v1",
+  "temperature": 0,
+  "max_tokens": 8192,
+  "input_tokens": 1485,
+  "output_tokens": 419,
+  "cost_usd": 0.00047415,
+  "latency_ms": 12749,
+  "run_date": "2026-03-19T23:57:29.921Z"
+}
