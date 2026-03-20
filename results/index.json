@@ -1,0 +1,227 @@
+[
+  {
+    "run_id": "7090d572-8a7b-4781-b881-8e4d3e9244e1",
+    "harness": "inventory-optimization",
+    "harness_version": "1.0.0",
+    "model": "anthropic/claude-sonnet-4-6",
+    "composite_score": 100,
+    "scores": {
+      "actionability": {
+        "score": 5,
+        "rationale": "Every recommendation specifies a concrete SKU identifier, a definitive action (restock/hold/reduce), an exact non-zero or zero quantity, and a clear urgency level (immediate/this-week/next-cycle), covering all 20 SKUs with enough specificity that a warehouse manager could place orders and schedule visits without follow-up questions."
+      },
+      "reasoning_transparency": {
+        "score": 5,
+        "rationale": "Each rationale field explicitly traces conclusions to exact numeric values from the data, for example 'DRINK-COLA-12OZ: 4 units remaining against a par of 20, velocity 12 units/7d (~1.7 units/day), giving ~2.3 days of stock,' making every calculation reproducible and verifiable."
+      },
+      "completeness": {
+        "score": 5,
+        "rationale": "All three required schema fields are meaningfully populated: the summary synthesizes overall inventory health beyond listing items, the recommendations array covers all 20 SKUs including borderline cases, and the data_gaps field identifies seven genuine missing data points such as retail prices, scheduled service visit dates, and spoilage/expiry dates."
+      }
+    },
+    "schema_valid": true,
+    "cost_usd": 0.052302,
+    "latency_ms": 41050,
+    "run_date": "2026-03-19T23:57:10.029Z"
+  },
+  {
+    "run_id": "f39cf220-9c9f-49e5-a820-6b85b37efb12",
+    "harness": "inventory-optimization",
+    "harness_version": "1.0.0",
+    "model": "openai/gpt-4o-mini",
+    "composite_score": 67,
+    "scores": {
+      "actionability": {
+        "score": 4,
+        "rationale": "Every recommendation specifies a concrete SKU, a definitive action (restock/hold), an exact quantity, and a clear urgency level drawn from an enumerated set, making it operationally executable; however, SNACK-PRETZEL-1OZ is incorrectly flagged for restock with quantity 10 despite having stock of 30 and velocity of 2 (well above par), and SNACK-CRACKER-2OZ is marked 'hold' with rationale that misreads the data (stock 3, velocity 9 is not sufficient for a week), undermining full executability."
+      },
+      "reasoning_transparency": {
+        "score": 3,
+        "rationale": "Rationale fields cite current_stock and velocity_7d values (e.g., 'Current stock is 0 with a 7-day velocity of 8 units') but do not show explicit calculations such as days-of-stock-remaining or comparison to par_level thresholds, and the SNACK-PRETZEL-1OZ rationale is internally contradictory ('current stock is 30 but with a low velocity of 2… restock recommended to avoid overstocking') making the reasoning unverifiable."
+      },
+      "completeness": {
+        "score": 3,
+        "rationale": "All three required schema fields are present and the recommendations array covers all six SKUs, but data_gaps is an empty array despite obvious missing data points such as expiration dates, machine visit schedules, and margin/cost data, and the summary restates individual product issues rather than synthesizing overall inventory health."
+      }
+    },
+    "schema_valid": true,
+    "cost_usd": 0.00047415,
+    "latency_ms": 12749,
+    "run_date": "2026-03-19T23:57:29.924Z"
+  },
+  {
+    "run_id": "7645db68-da67-40a7-af7b-95c26359faae",
+    "harness": "inventory-optimization",
+    "harness_version": "1.0.0",
+    "model": "google/gemini-3.1-flash-lite-preview",
+    "composite_score": 93,
+    "scores": {
+      "actionability": {
+        "score": 5,
+        "rationale": "Every recommendation specifies a concrete SKU identifier (e.g., 'DRINK-COLA-12OZ'), a definitive action ('restock' or 'reduce'), an exact quantity (e.g., 16, 22, 12), and a structured urgency level ('immediate', 'this-week', or 'next-cycle'), providing sufficient detail for a warehouse manager to place orders and schedule visits without follow-up questions."
+      },
+      "reasoning_transparency": {
+        "score": 4,
+        "rationale": "Most rationales cite specific numeric values such as current stock, par level, and velocity (e.g., 'Current stock of 4 is below par of 20; at 1.7 units/day velocity, stock will last less than 3 days'), but the days-remaining calculations are stated as conclusions rather than shown as explicit arithmetic (e.g., 4/1.7 = 2.35 days), making them directionally verifiable but not fully reproducible from the rationale text alone."
+      },
+      "completeness": {
+        "score": 5,
+        "rationale": "All three required schema fields are meaningfully populated: the summary synthesizes overall inventory health by identifying critical stockouts, overstocked items, and the count of SKUs requiring restocking; the recommendations array covers all SKUs at or below par as well as overstocked items warranting a 'reduce' decision; and data_gaps identifies three genuine missing data points including expiration dates, machine capacity limits, and retail pricing."
+      }
+    },
+    "schema_valid": true,
+    "cost_usd": 0.0006381000000000001,
+    "latency_ms": 5473,
+    "run_date": "2026-03-19T23:57:44.330Z"
+  },
+  {
+    "run_id": "d986ea98-3a5c-42a0-a124-87536afe8fcf",
+    "harness": "pricing-strategy",
+    "harness_version": "1.0.0",
+    "model": "anthropic/claude-sonnet-4-6",
+    "composite_score": 100,
+    "scores": {
+      "actionability": {
+        "score": 5,
+        "rationale": "Every one of the 20 SKU recommendations specifies an exact recommended_price (e.g., DRINK-WATER-16OZ: $1.29→$1.49), a direction field (increase/decrease/hold), and a confidence rating, making the output immediately implementable in a POS system without further analysis."
+      },
+      "reasoning_transparency": {
+        "score": 5,
+        "rationale": "Each rationale cites specific data values from the catalog, for example the DRINK-COLA-12OZ rationale references exact velocity (182 units/30d), avg_price_90d ($1.49) vs. current price ($1.59), number of price changes (1 in 90d), and calculates margin change ($0.75→$0.91/unit), allowing independent verification of every claim."
+      },
+      "completeness": {
+        "score": 5,
+        "rationale": "All three required schema fields are fully populated: the summary synthesizes cross-category patterns (beverages as greatest margin opportunity, slow-movers needing price reductions), all 20 SKUs are covered in the recommendations array, and the market_observations field contains eight distinct cross-catalog patterns including the velocity-price inverse in candy, the $1.29–$1.49 impulse-purchase sweet spot, and the systemic finding that 14 of 20 SKUs have never had a price change."
+      }
+    },
+    "schema_valid": true,
+    "cost_usd": 0.069108,
+    "latency_ms": 68953,
+    "run_date": "2026-03-19T23:59:03.132Z"
+  },
+  {
+    "run_id": "1f45174b-4fd7-4a25-ae90-312c193779c4",
+    "harness": "pricing-strategy",
+    "harness_version": "1.0.0",
+    "model": "openai/gpt-4o-mini",
+    "composite_score": 67,
+    "scores": {
+      "actionability": {
+        "score": 5,
+        "rationale": "Every recommendation specifies an exact recommended_price (e.g., $1.69 for DRINK-COLA-12OZ, $2.49 for SNACK-JERKY-1OZ), a direction (increase/decrease), and a confidence rating (high/medium), meeting all criteria for immediate POS implementation."
+      },
+      "reasoning_transparency": {
+        "score": 2,
+        "rationale": "Rationale fields reference some data values (e.g., '182 units sold', 'average price was $1.49') but never cite cost_per_unit, calculate actual margin percentages, or show how specific margin figures support the recommended price change, falling between generic category references and full quantitative tracing."
+      },
+      "completeness": {
+        "score": 3,
+        "rationale": "All three required schema fields are present and populated, but the summary restates individual SKU observations rather than synthesizing systemic patterns, and market_observations contain mostly generic statements (e.g., 'beverages have higher sales volumes') without cross-catalog patterns like margin differentials between categories or price-change frequency correlations grounded in specific data."
+      }
+    },
+    "schema_valid": true,
+    "cost_usd": 0.00054015,
+    "latency_ms": 15061,
+    "run_date": "2026-03-19T23:59:27.390Z"
+  },
+  {
+    "run_id": "ca7c4515-6d72-4edc-bfdd-9fd2ced72a89",
+    "harness": "pricing-strategy",
+    "harness_version": "1.0.0",
+    "model": "google/gemini-3.1-flash-lite-preview",
+    "composite_score": 80,
+    "scores": {
+      "actionability": {
+        "score": 5,
+        "rationale": "Every recommendation specifies an exact recommended_price (e.g., 1.69 for DRINK-COLA-12OZ), a direction field (increase/decrease), and a confidence rating (high/medium/low), making all five recommendations immediately implementable in a point-of-sale system."
+      },
+      "reasoning_transparency": {
+        "score": 3,
+        "rationale": "Rationale fields reference data categories in general terms such as 'high sales velocity (182 units)' and 'low sales velocity (12 units)' but never cite specific cost_per_unit values, margin percentages, or category averages to support the price change magnitude, so a reader cannot independently verify the margin arithmetic behind each recommendation."
+      },
+      "completeness": {
+        "score": 4,
+        "rationale": "All three required schema fields are populated and the market_observations section identifies multiple cross-catalog patterns (beverage price resilience vs. premium snack underperformance vs. candy impulse behavior), but the summary restates individual SKU-level findings rather than synthesizing systemic patterns like beverage margins lagging snack margins, placing it between the score-3 and score-5 anchors."
+      }
+    },
+    "schema_valid": true,
+    "cost_usd": 0.0004174,
+    "latency_ms": 3603,
+    "run_date": "2026-03-19T23:59:38.017Z"
+  },
+  {
+    "run_id": "b9db114b-0d39-4e08-bec0-243350500361",
+    "harness": "financial-forecasting",
+    "harness_version": "1.0.0",
+    "model": "anthropic/claude-sonnet-4-6",
+    "composite_score": 100,
+    "scores": {
+      "actionability": {
+        "score": 5,
+        "rationale": "The forecast object contains exact dollar projections ($28,640 revenue, $11,490 expenses, $4,090 net income) with an explicit methodology naming specific months and calculations (e.g., '4–7% month-over-month growth off the winter trough,' '44.9% trailing COGS margin'), confidence is stated as 'medium' with a rationale referencing expense trend uncertainty, and opportunities include concrete dollar impact ranges such as '$80–175/month if labor hours can be reduced by 10–20% through route efficiency.'"
+      },
+      "reasoning_transparency": {
+        "score": 5,
+        "rationale": "The forecast methodology names specific months and values (e.g., 'February 2026 baseline of $9,140,' 'trailing 3-month average COGS margin of ~44.9%,' '$3,510 in Dec 2025 to $3,730 in Feb 2026'), and every risk and opportunity entry includes a data_evidence field citing named categories with specific dollar figures (e.g., 'Repairs: amount_last_month = $410, amount_3mo_avg = $320, trend = increasing'), making calculations reproducible from the provided data."
+      },
+      "completeness": {
+        "score": 5,
+        "rationale": "All five top-level fields are substantively populated: the executive_summary synthesizes the margin compression trend (not just restating the prompt), the forecast includes all six sub-fields with a named period and non-trivial methodology, risks contains four entries with evidence, opportunities contains five entries each with estimated_impact dollar ranges, and data_limitations identifies six genuine missing data types including 'no machine-level revenue or expense breakdown' and absence of cash flow data."
+      }
+    },
+    "schema_valid": true,
+    "cost_usd": 0.037908000000000004,
+    "latency_ms": 42785,
+    "run_date": "2026-03-20T00:00:27.659Z"
+  },
+  {
+    "run_id": "5d666068-86b4-4e3d-b3d4-a1fd20584f72",
+    "harness": "financial-forecasting",
+    "harness_version": "1.0.0",
+    "model": "openai/gpt-4o-mini",
+    "composite_score": 60,
+    "scores": {
+      "actionability": {
+        "score": 3,
+        "rationale": "The forecast provides exact dollar figures for projected revenue ($10,000), expenses ($3,700), and net income ($2,300), and opportunities include dollar impact ranges ($200-400/month, $300-500/month), but the methodology description ('3-month average growth rate of 3.5% from the last month') is partially specific yet lacks the named base months or starting revenue figure needed to reproduce the calculation, and the confidence level states 'medium' without a rationale explaining why."
+      },
+      "reasoning_transparency": {
+        "score": 2,
+        "rationale": "The methodology names a growth rate (3.5%) and references 'the last month' but does not identify which specific months were averaged or what the actual revenue figures were, and the risks and opportunities cite category names ('machine maintenance,' 'restocking labor') without providing the specific dollar values or trend indicators from the historical data that would make the calculations reproducible."
+      },
+      "completeness": {
+        "score": 4,
+        "rationale": "All five top-level fields are populated with substantive content including two risks with evidence fields, two opportunities with dollar impact ranges, and a data_limitations array that identifies genuine gaps (seasonal fluctuations, external market conditions), though the executive_summary partially restates general trends rather than synthesizing specific figures, and the forecast period ('March–May 2026') is a three-month window rather than the more typical forward-looking period."
+      }
+    },
+    "schema_valid": true,
+    "cost_usd": 0.0003984,
+    "latency_ms": 8538,
+    "run_date": "2026-03-20T00:00:47.167Z"
+  },
+  {
+    "run_id": "7ddfc62a-c029-421e-9a1b-a7dee5c581eb",
+    "harness": "financial-forecasting",
+    "harness_version": "1.0.0",
+    "model": "google/gemini-3.1-flash-lite-preview",
+    "composite_score": 87,
+    "scores": {
+      "actionability": {
+        "score": 4,
+        "rationale": "The forecast provides exact dollar projections ($28,500 revenue, $11,550 expenses, $4,170 net income) with a named methodology ('3-month linear growth trend of approximately 2.3% per month'), and opportunities include concrete dollar impact ranges ($150-250/month, $100-200/month), but the confidence rationale is stated only as a label ('medium') without explaining what would make it high or low."
+      },
+      "reasoning_transparency": {
+        "score": 4,
+        "rationale": "The risks entries cite specific data values (e.g., 'Operating expenses have increased from 2940 in Dec 2024 to 3730 in Feb 2026') and the methodology names specific growth rates (2.3% monthly revenue, 3% expense growth), but the forecast methodology does not identify which specific months were used for the linear trend calculation, making it partially but not fully reproducible."
+      },
+      "completeness": {
+        "score": 5,
+        "rationale": "All five top-level fields are substantively populated: the executive_summary synthesizes the margin compression trend, the forecast includes all six sub-fields with a named period ('March–May 2026'), risks contains two entries with data_evidence, opportunities contains two entries with dollar impact ranges, and data_limitations identifies genuine missing data types including machine-level performance and seasonal patterns."
+      }
+    },
+    "schema_valid": true,
+    "cost_usd": 0.00032680000000000003,
+    "latency_ms": 3062,
+    "run_date": "2026-03-20T00:00:59.263Z"
+  }
+]

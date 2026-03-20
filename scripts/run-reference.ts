@@ -36,8 +36,8 @@ const HARNESSES = [
 
 const MODELS = [
   "anthropic/claude-sonnet-4-6",
-  "openai/gpt-4o",
-  "google/gemini-1.5-pro",
+  "openai/gpt-4o-mini",
+  "google/gemini-3.1-flash-lite-preview",
 ];
 
 const JUDGE_MODEL = "anthropic/claude-sonnet-4-6";
@@ -48,8 +48,8 @@ const JUDGE_EST_OUTPUT = 512;
 
 const ENV_VAR_MAP: Record<string, string> = {
   "anthropic/claude-sonnet-4-6": "ANTHROPIC_API_KEY",
-  "openai/gpt-4o": "OPENAI_API_KEY",
-  "google/gemini-1.5-pro": "GOOGLE_API_KEY",
+  "openai/gpt-4o-mini": "OPENAI_API_KEY",
+  "google/gemini-3.1-flash-lite-preview": "GOOGLE_API_KEY",
 };
 
 // ---------------------------------------------------------------------------

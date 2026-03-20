@@ -9,7 +9,8 @@ export async function runOpenAI(modelId: string, opts: RunOptions): Promise<RunR
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
   // zodResponseFormat requires the Zod schema object, NOT the JSON Schema from z.toJSONSchema()
-  const completion = await client.beta.chat.completions.parse({
+  // Note: In OpenAI SDK v5+, structured outputs parse moved from beta.chat to chat directly.
+  const completion = await client.chat.completions.parse({
     model: modelId,
     max_tokens: opts.maxTokens,
     temperature: opts.temperature,

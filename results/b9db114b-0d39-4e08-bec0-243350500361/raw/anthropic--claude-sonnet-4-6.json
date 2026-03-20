@@ -1,0 +1,68 @@
+{
+  "executive_summary": "The business has grown revenue steadily from mid-2024 through a peak of ~$9,970 in August 2025, but has since entered a clear seasonal decline, with revenue falling to $8,390 in December 2025 before partially recovering to $9,140 in February 2026. The most critical finding is a structural margin compression: while revenue in February 2026 ($9,140) is roughly comparable to May 2025 ($9,280), net income ($1,300) is significantly lower than it was then ($1,980), driven entirely by operating expenses that have grown ~20% over the same period and show no signs of stabilizing.",
+  "forecast": {
+    "period": "March–May 2026",
+    "projected_revenue": 28640,
+    "projected_expenses": 11490,
+    "projected_net_income": 4090,
+    "confidence": "medium",
+    "methodology": "Revenue is projected using the observed seasonal pattern from the prior year (2025), where March–May showed consistent month-over-month growth of roughly 4–7% off the winter trough. Applying a similar seasonal lift to the February 2026 baseline of $9,140 yields estimates of ~$9,500 (March), ~$9,780 (April), and ~$10,060 (May) — a combined $29,340 in revenue. COGS is held at the trailing 3-month average COGS margin of ~44.9%, yielding ~$13,180 in combined COGS and ~$16,160 in gross profit. Operating expenses are extrapolated by continuing the observed ~$120/month linear growth trend (from $3,510 in Dec 2025 to $3,730 in Feb 2026), projecting $3,850 (March), $3,970 (April), and $4,090 (May) for a combined $11,910. Projected net income = $16,160 gross profit − $11,910 operating expenses = ~$4,250. Values are rounded to nearest $10 and blended conservatively to account for expense trend uncertainty, yielding the reported figures."
+  },
+  "risks": [
+    {
+      "description": "Accelerating operating expense growth could outpace revenue recovery. Expenses have grown ~$120/month on average over the last 3 months, and 6 of 10 expense categories are trending 'increasing'. If this pace accelerates, net income could fall further even as revenue rebounds seasonally.",
+      "severity": "high",
+      "data_evidence": "Operating expenses rose from $3,510 (Dec 2025) to $3,730 (Feb 2026), a $220 increase in just 2 months. Categories with increasing trends: machine_maintenance (+$50 vs 3mo avg), restocking_labor (+$50), supplies (+$20), software_fees (+$10), merchant_processing (+$20), repairs (+$90)."
+    },
+    {
+      "description": "Repairs costs are spiking and may signal aging machine infrastructure. The repairs category is $410 last month vs. a $320 three-month average — a 28% spike — suggesting one or more machines may be deteriorating and could require costly replacement or major servicing.",
+      "severity": "high",
+      "data_evidence": "Repairs: amount_last_month = $410, amount_3mo_avg = $320, trend = increasing. This is the largest percentage deviation from 3-month average of any category (+28%)."
+    },
+    {
+      "description": "Seasonal revenue softness may persist longer or be deeper than the prior year pattern suggests. The December 2025 trough ($8,390) and January 2026 recovery ($8,720) are tracking slightly below the equivalent prior-year months ($8,420 and $7,980), making the seasonal rebound less certain.",
+      "severity": "medium",
+      "data_evidence": "Jan 2026 revenue ($8,720) is only $740 above Jan 2025 ($7,980), while peak-to-trough decline was similar. The seasonal recovery slope may be shallower if consumer traffic or location performance has softened."
+    },
+    {
+      "description": "Miscellaneous expenses are elevated and opaque. At $600/month (last month) and $580 three-month average, this is the second-largest expense category with no itemization, making it difficult to forecast or control.",
+      "severity": "medium",
+      "data_evidence": "Miscellaneous: amount_last_month = $600, amount_3mo_avg = $580, trend = stable. Represents ~16% of total operating expenses with no category detail provided."
+    }
+  ],
+  "opportunities": [
+    {
+      "description": "Audit and reduce the 'miscellaneous' expense category. At $600/month with no itemization, this is the second-largest expense line. Breaking it down and eliminating non-essential spend could meaningfully improve net income without affecting operations.",
+      "estimated_impact": "$100–300/month in recovered net income if 15–50% of miscellaneous spend is discretionary or redundant",
+      "data_evidence": "Miscellaneous: amount_last_month = $600, amount_3mo_avg = $580, trend = stable. No sub-category detail available to assess necessity."
+    },
+    {
+      "description": "Optimize restocking labor routes and scheduling. Restocking labor is the single largest expense category at $870/month and is trending upward. Route consolidation or schedule optimization could reduce hours without impacting product availability.",
+      "estimated_impact": "$80–175/month if labor hours can be reduced by 10–20% through route efficiency",
+      "data_evidence": "Restocking_labor: amount_last_month = $870, amount_3mo_avg = $820, trend = increasing. Largest individual expense category."
+    },
+    {
+      "description": "Capitalize on the seasonal revenue upswing (March–May) by ensuring high-margin products are well-stocked and machines are fully operational heading into the peak period. Historical data shows this window generates the strongest revenue of the year.",
+      "estimated_impact": "$200–400/month in additional net income if revenue tracks the upper bound of the 2025 seasonal curve",
+      "data_evidence": "Revenue grew from $8,110 (Feb 2025) to $9,280 (May 2025), a $1,170 increase over 3 months. A similar trajectory from the Feb 2026 baseline of $9,140 could push May 2026 revenue above $10,000."
+    },
+    {
+      "description": "Proactively service or replace machines showing elevated repair costs to avoid larger emergency repair bills. Addressing root causes now during the lower-revenue winter period could reduce repair spend before the high-revenue summer season.",
+      "estimated_impact": "$50–200/month in avoided repair costs; prevents potential revenue loss from machine downtime",
+      "data_evidence": "Repairs: amount_last_month = $410, amount_3mo_avg = $320, trend = increasing. A 28% spike above the 3-month average suggests reactive rather than preventive maintenance is currently occurring."
+    },
+    {
+      "description": "Review merchant processing fees and renegotiate or switch providers. This category is trending increasing and scales with revenue — locking in a lower rate now before the high-revenue spring/summer period would compound savings.",
+      "estimated_impact": "$30–80/month depending on current rate vs. market alternatives",
+      "data_evidence": "Merchant_processing: amount_last_month = $290, amount_3mo_avg = $270, trend = increasing. Scales with transaction volume, so savings rate improves as revenue grows."
+    }
+  ],
+  "data_limitations": [
+    "No machine-level revenue or expense breakdown is provided, making it impossible to identify which locations are driving growth or underperformance.",
+    "The 'miscellaneous' expense category represents ~16% of operating expenses with no itemization, reducing forecast precision and limiting actionable cost analysis.",
+    "No data on machine count changes, new location additions, or contract expirations — any of which could materially shift the revenue or cost trajectory.",
+    "Only 15 months of history are available, providing just one full seasonal cycle. This limits confidence in seasonal pattern assumptions, particularly for the spring ramp.",
+    "No information on product mix, pricing changes, or COGS structure by category — limits ability to forecast margin improvement opportunities on the revenue side.",
+    "No accounts payable, cash flow, or balance sheet data provided — net income trends may not reflect actual cash availability if payment timing differs."
+  ]
+}

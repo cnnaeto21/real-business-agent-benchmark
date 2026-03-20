@@ -1,0 +1,25 @@
+{
+  "run_id": "ca7c4515-6d72-4edc-bfdd-9fd2ced72a89",
+  "harness": "pricing-strategy",
+  "harness_version": "1.0.0",
+  "model": "google/gemini-3.1-flash-lite-preview",
+  "composite_score": 80,
+  "scores": {
+    "actionability": {
+      "score": 5,
+      "rationale": "Every recommendation specifies an exact recommended_price (e.g., 1.69 for DRINK-COLA-12OZ), a direction field (increase/decrease), and a confidence rating (high/medium/low), making all five recommendations immediately implementable in a point-of-sale system."
+    },
+    "reasoning_transparency": {
+      "score": 3,
+      "rationale": "Rationale fields reference data categories in general terms such as 'high sales velocity (182 units)' and 'low sales velocity (12 units)' but never cite specific cost_per_unit values, margin percentages, or category averages to support the price change magnitude, so a reader cannot independently verify the margin arithmetic behind each recommendation."
+    },
+    "completeness": {
+      "score": 4,
+      "rationale": "All three required schema fields are populated and the market_observations section identifies multiple cross-catalog patterns (beverage price resilience vs. premium snack underperformance vs. candy impulse behavior), but the summary restates individual SKU-level findings rather than synthesizing systemic patterns like beverage margins lagging snack margins, placing it between the score-3 and score-5 anchors."
+    }
+  },
+  "schema_valid": true,
+  "cost_usd": 0.0004174,
+  "latency_ms": 3603,
+  "run_date": "2026-03-19T23:59:38.017Z"
+}

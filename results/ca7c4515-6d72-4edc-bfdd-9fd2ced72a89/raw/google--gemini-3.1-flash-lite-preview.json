@@ -1,0 +1,51 @@
+{
+  "summary": "The current pricing strategy shows strong performance in high-velocity items like Cola and Water, but several products with low sales velocity and healthy margins suggest room for price optimization. Recommendations focus on increasing prices for high-demand items that have successfully absorbed previous price hikes, while maintaining competitive pricing on lower-velocity snacks to stimulate volume.",
+  "recommendations": [
+    {
+      "sku": "DRINK-COLA-12OZ",
+      "current_price": 1.59,
+      "recommended_price": 1.69,
+      "direction": "increase",
+      "rationale": "High sales velocity (182 units) and successful absorption of a previous price increase from 1.49 to 1.59 suggest the product is price-inelastic.",
+      "confidence": "high"
+    },
+    {
+      "sku": "DRINK-TEA-SWEET-16OZ",
+      "current_price": 1.79,
+      "recommended_price": 1.89,
+      "direction": "increase",
+      "rationale": "Strong sales volume despite multiple price changes indicates high demand; current margin allows for further optimization.",
+      "confidence": "medium"
+    },
+    {
+      "sku": "SNACK-JERKY-1OZ",
+      "current_price": 2.59,
+      "recommended_price": 2.39,
+      "direction": "decrease",
+      "rationale": "Extremely low sales velocity (12 units) suggests the current price point is a barrier to entry for this category.",
+      "confidence": "medium"
+    },
+    {
+      "sku": "SNACK-GRANOLA-1OZ",
+      "current_price": 1.69,
+      "recommended_price": 1.79,
+      "direction": "increase",
+      "rationale": "Recent price increases have not significantly dampened demand, suggesting room to capture more margin.",
+      "confidence": "medium"
+    },
+    {
+      "sku": "DRINK-JUICE-OJ-10OZ",
+      "current_price": 2.29,
+      "recommended_price": 2.09,
+      "direction": "decrease",
+      "rationale": "Very low sales velocity (23 units) indicates the product is overpriced relative to consumer expectations for this category.",
+      "confidence": "low"
+    }
+  ],
+  "market_observations": [
+    "High-velocity items (Cola, Water, Chips) are performing well at current price points, indicating a stable baseline.",
+    "Products with multiple price changes in the last 90 days show resilience, suggesting customers are less sensitive to incremental increases in the beverage category.",
+    "Premium snacks like Beef Jerky are underperforming, likely due to the high price-to-portion ratio.",
+    "Candy items maintain consistent volume, suggesting they are impulse purchases less affected by minor price fluctuations."
+  ]
+}

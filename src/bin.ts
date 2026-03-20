@@ -10,7 +10,7 @@ program
   .requiredOption("--harness <name>", "Harness name (e.g. inventory-optimization)")
   .requiredOption("--model <provider/model-id>", "Model string (e.g. anthropic/claude-sonnet-4-6)")
   .option("--temperature <number>", "Sampling temperature (default: 0)", "0")
-  .option("--max-tokens <number>", "Max output tokens (default: 4096)", "4096")
+  .option("--max-tokens <number>", "Max output tokens (default: 8192)", "8192")
   .option("--skip-eval", "Skip scoring (raw output and meta.json still written)")
   .action(async (options) => {
     try {

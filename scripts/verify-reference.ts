@@ -23,8 +23,8 @@ const HARNESSES = [
 
 const MODELS = [
   "anthropic/claude-sonnet-4-6",
-  "openai/gpt-4o",
-  "google/gemini-1.5-pro",
+  "openai/gpt-4o-mini",
+  "google/gemini-3.1-flash-lite-preview",
 ];
 
 // ---------------------------------------------------------------------------

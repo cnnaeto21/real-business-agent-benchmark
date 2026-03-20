@@ -1,0 +1,14 @@
+{
+  "run_id": "5d666068-86b4-4e3d-b3d4-a1fd20584f72",
+  "harness": "financial-forecasting",
+  "harness_version": "1.0.0",
+  "model": "openai/gpt-4o-mini",
+  "provider_api_version": "openai-chat-completions-v1",
+  "temperature": 0,
+  "max_tokens": 8192,
+  "input_tokens": 1240,
+  "output_tokens": 354,
+  "cost_usd": 0.0003984,
+  "latency_ms": 8538,
+  "run_date": "2026-03-20T00:00:47.165Z"
+}

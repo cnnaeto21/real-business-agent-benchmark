@@ -11,8 +11,8 @@
 
 const PRICE_TABLE: Record<string, { inputPerMTok: number; outputPerMTok: number }> = {
   "anthropic/claude-sonnet-4-6": { inputPerMTok: 3.00, outputPerMTok: 15.00 },
-  "openai/gpt-4o":               { inputPerMTok: 2.50, outputPerMTok: 10.00 },
-  "google/gemini-1.5-pro":       { inputPerMTok: 1.25, outputPerMTok: 5.00 },
+  "openai/gpt-4o-mini":          { inputPerMTok: 0.15, outputPerMTok: 0.60 },
+  "google/gemini-3.1-flash-lite-preview": { inputPerMTok: 0.10, outputPerMTok: 0.40 }, // preview — verify pricing before publishing
 };
 
 /**
