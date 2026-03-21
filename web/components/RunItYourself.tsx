@@ -14,7 +14,7 @@ export default function RunItYourself() {
         <CopyButton text={COMMAND} />
       </div>
       <a
-        href="https://github.com/obinnaeto/agentHarness/blob/main/docs/running.md"
+        href="https://github.com/cnnaeto21/real-business-agent-benchmark/blob/master/docs/running.md"
         className="text-indigo-600 hover:text-indigo-800 underline font-medium"
         target="_blank"
         rel="noopener noreferrer"
