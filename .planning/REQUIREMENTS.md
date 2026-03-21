@@ -52,7 +52,7 @@
 
 ### Documentation
 
-- [ ] **DOCS-01**: README explains methodology: what RBAB measures, how scoring works, known limitations
+- [x] **DOCS-01**: README explains methodology: what RBAB measures, how scoring works, known limitations
 - [x] **DOCS-02**: `docs/harness-spec.md` documents the harness package format so others can fork and adapt
 - [x] **DOCS-03**: `docs/running.md` documents how to run a benchmark locally (env vars, install, single command)
 - [x] **DOCS-04**: `docs/scoring.md` documents the hybrid scoring system (JSON validation + LLM judge) and rubric dimensions
@@ -127,7 +127,7 @@
 | DASH-03 | Phase 5 | Complete |
 | DASH-04 | Phase 5 | Complete |
 | DASH-05 | Phase 5 | Complete |
-| DOCS-01 | Phase 6 | Pending |
+| DOCS-01 | Phase 6 | Complete |
 | DOCS-02 | Phase 6 | Complete |
 | DOCS-03 | Phase 6 | Complete |
 | DOCS-04 | Phase 6 | Complete |

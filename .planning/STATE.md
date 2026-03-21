@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 06-01 (docs/scoring.md, docs/harness-spec.md, LIMITATIONS.md)
-last_updated: "2026-03-21T21:26:11.728Z"
+stopped_at: Completed 06-02 README.md — awaiting human verify checkpoint for dashboard URL and link verification
+last_updated: "2026-03-21T21:30:05.114Z"
 last_activity: "2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
 progress:
   total_phases: 6
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 19
-  completed_plans: 17
+  completed_plans: 18
   percent: 80
 ---
 
@@ -67,6 +67,7 @@ Progress: [████████░░] 80%
 | Phase 05-dashboard P01 | 9 | 2 tasks | 11 files |
 | Phase 05-dashboard P02 | 30 | 3 tasks | 2 files |
 | Phase 06-documentation-and-launch P01 | 3 | 3 tasks | 3 files |
+| Phase 06-documentation-and-launch P02 | 1 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -121,6 +122,8 @@ Recent decisions affecting current work:
 - [Phase 05-dashboard]: Vercel Include files outside root=Enabled — allows web/ subdirectory build to access results/ at repo root
 - [Phase 06-documentation-and-launch]: docs/running.md confirmed already complete for DOCS-03 — no changes made
 - [Phase 06-documentation-and-launch]: Score anchors in docs/scoring.md copied verbatim from rubric.md — not paraphrased
+- [Phase 06-documentation-and-launch]: Vercel dashboard URL left as placeholder — vercel CLI unavailable; user must paste URL before launch
+- [Phase 06-documentation-and-launch]: Bret Taylor post URL left as placeholder — post not locatable with certainty; user must paste URL before launch
 
 ### Pending Todos
 
@@ -133,6 +136,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-21T21:26:11.721Z
-Stopped at: Completed 06-01 (docs/scoring.md, docs/harness-spec.md, LIMITATIONS.md)
+Last session: 2026-03-21T21:30:05.107Z
+Stopped at: Completed 06-02 README.md — awaiting human verify checkpoint for dashboard URL and link verification
 Resume file: None
