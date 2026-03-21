@@ -74,6 +74,9 @@ export default function ScoresTable({ results }: Props) {
                 <th className="px-10 py-6 font-black text-sierra-forest/40 text-[10px] uppercase tracking-[0.25em] text-right">Composite</th>
                 <th className="px-10 py-6 font-black text-sierra-forest/40 text-[10px] uppercase tracking-[0.25em] text-right">Unit Cost</th>
                 <th className="px-10 py-6 font-black text-sierra-forest/40 text-[10px] uppercase tracking-[0.25em] text-right">Latency</th>
+                <th className="px-10 py-6 font-black text-sierra-forest/40 text-[10px] uppercase tracking-[0.25em] text-right">Temp</th>
+                <th className="px-10 py-6 font-black text-sierra-forest/40 text-[10px] uppercase tracking-[0.25em] text-right">Harness Ver.</th>
+                <th className="px-10 py-6 font-black text-sierra-forest/40 text-[10px] uppercase tracking-[0.25em] text-right">Run Date</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-sierra-forest/[0.04]">
@@ -104,6 +107,15 @@ export default function ScoresTable({ results }: Props) {
                       </td>
                       <td className="px-10 py-8 text-right font-mono text-[11px] text-sierra-forest/30 font-bold group-hover:text-sierra-forest/50 transition-colors">
                         {r.latency_ms.toLocaleString()}ms
+                      </td>
+                      <td className="px-10 py-8 text-right font-mono text-[11px] text-sierra-forest/30 font-bold">
+                        {r.temperature}
+                      </td>
+                      <td className="px-10 py-8 text-right font-mono text-[11px] text-sierra-forest/30 font-bold">
+                        {r.harness_version}
+                      </td>
+                      <td className="px-10 py-8 text-right font-mono text-[11px] text-sierra-forest/30 font-bold">
+                        {r.run_date ? new Date(r.run_date).toLocaleDateString() : '—'}
                       </td>
                     </tr>
                   );

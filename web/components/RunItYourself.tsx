@@ -35,7 +35,7 @@ export default function RunItYourself() {
             <div className="flex items-center gap-4 overflow-hidden">
                 <span className="text-sierra-emerald font-black text-sm shrink-0 select-none opacity-50">#</span>
                 <code className="text-sm font-mono text-sierra-cream/90 overflow-x-auto whitespace-nowrap scrollbar-hide">
-                  <span className="text-sierra-emerald font-black">benchmark</span> --harness <span className="text-sierra-cream/50 italic">inventory-optimization</span> --model <span className="text-sierra-cream font-bold underline decoration-sierra-emerald underline-offset-4">anthropic/claude-3-5-sonnet</span>
+                  <span className="text-sierra-emerald font-black">benchmark</span> --harness <span className="text-sierra-cream/50 italic">inventory-optimization</span> --model <span className="text-sierra-cream font-bold underline decoration-sierra-emerald underline-offset-4">anthropic/claude-sonnet-4-6</span>
                 </code>
             </div>
             <CopyButton text={COMMAND} />
