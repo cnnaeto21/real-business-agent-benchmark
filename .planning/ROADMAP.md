@@ -112,7 +112,11 @@ Plans:
   2. `LIMITATIONS.md` explicitly states: single-domain scope, no ground truth, single-pass judge, training data leakage risk
   3. `docs/harness-spec.md` documents the harness package format with enough detail that someone can author a new harness without asking for help
   4. `docs/scoring.md` explains the hybrid scoring system (JSON validation gate + LLM judge), rubric dimensions, and score anchors
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Write docs/scoring.md, docs/harness-spec.md, LIMITATIONS.md (standalone docs, all link targets for README)
+- [ ] 06-02-PLAN.md — Write README.md + human checkpoint to verify links and clean-clone flow
 
 ## Progress
 
@@ -126,4 +130,4 @@ Phases execute in strict dependency order: 1 → 2 → 3 → 4 → 5 → 6
 | 3. Eval Engine | 4/4 | Complete   | 2026-03-17 |
 | 4. Reference Runs | 0/2 | Not started | - |
 | 5. Dashboard | 2/2 | Complete   | 2026-03-21 |
-| 6. Documentation and Launch | 0/? | Not started | - |
+| 6. Documentation and Launch | 0/2 | Not started | - |
