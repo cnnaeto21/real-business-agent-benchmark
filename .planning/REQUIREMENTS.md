@@ -53,10 +53,10 @@
 ### Documentation
 
 - [ ] **DOCS-01**: README explains methodology: what RBAB measures, how scoring works, known limitations
-- [ ] **DOCS-02**: `docs/harness-spec.md` documents the harness package format so others can fork and adapt
-- [ ] **DOCS-03**: `docs/running.md` documents how to run a benchmark locally (env vars, install, single command)
-- [ ] **DOCS-04**: `docs/scoring.md` documents the hybrid scoring system (JSON validation + LLM judge) and rubric dimensions
-- [ ] **DOCS-05**: `LIMITATIONS.md` explicitly states: single-domain scope, no ground truth, single-pass judge, training data leakage risk
+- [x] **DOCS-02**: `docs/harness-spec.md` documents the harness package format so others can fork and adapt
+- [x] **DOCS-03**: `docs/running.md` documents how to run a benchmark locally (env vars, install, single command)
+- [x] **DOCS-04**: `docs/scoring.md` documents the hybrid scoring system (JSON validation + LLM judge) and rubric dimensions
+- [x] **DOCS-05**: `LIMITATIONS.md` explicitly states: single-domain scope, no ground truth, single-pass judge, training data leakage risk
 
 ---
 
@@ -128,10 +128,10 @@
 | DASH-04 | Phase 5 | Complete |
 | DASH-05 | Phase 5 | Complete |
 | DOCS-01 | Phase 6 | Pending |
-| DOCS-02 | Phase 6 | Pending |
-| DOCS-03 | Phase 6 | Pending |
-| DOCS-04 | Phase 6 | Pending |
-| DOCS-05 | Phase 6 | Pending |
+| DOCS-02 | Phase 6 | Complete |
+| DOCS-03 | Phase 6 | Complete |
+| DOCS-04 | Phase 6 | Complete |
+| DOCS-05 | Phase 6 | Complete |
 
 **Coverage:**
 - v1 requirements: 33 total

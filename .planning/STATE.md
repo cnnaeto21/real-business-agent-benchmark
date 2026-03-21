@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 6 context gathered
-last_updated: "2026-03-21T21:04:50.020Z"
+stopped_at: Completed 06-01 (docs/scoring.md, docs/harness-spec.md, LIMITATIONS.md)
+last_updated: "2026-03-21T21:26:11.728Z"
 last_activity: "2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
 progress:
   total_phases: 6
   completed_phases: 4
-  total_plans: 17
-  completed_plans: 16
+  total_plans: 19
+  completed_plans: 17
   percent: 80
 ---
 
@@ -66,6 +66,7 @@ Progress: [████████░░] 80%
 | Phase 04-reference-runs P01 | 10 | 2 tasks | 3 files |
 | Phase 05-dashboard P01 | 9 | 2 tasks | 11 files |
 | Phase 05-dashboard P02 | 30 | 3 tasks | 2 files |
+| Phase 06-documentation-and-launch P01 | 3 | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -118,6 +119,8 @@ Recent decisions affecting current work:
 - [Phase 05-dashboard]: web/ scaffolded with Next.js 16.2.0 (Turbopack, Tailwind v4, App Router)
 - [Phase 05-dashboard]: results/ committed to git (not gitignored) — required for Vercel static build to access benchmark data at build time
 - [Phase 05-dashboard]: Vercel Include files outside root=Enabled — allows web/ subdirectory build to access results/ at repo root
+- [Phase 06-documentation-and-launch]: docs/running.md confirmed already complete for DOCS-03 — no changes made
+- [Phase 06-documentation-and-launch]: Score anchors in docs/scoring.md copied verbatim from rubric.md — not paraphrased
 
 ### Pending Todos
 
@@ -130,6 +133,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-21T21:04:50.010Z
-Stopped at: Phase 6 context gathered
-Resume file: .planning/phases/06-documentation-and-launch/06-CONTEXT.md
+Last session: 2026-03-21T21:26:11.721Z
+Stopped at: Completed 06-01 (docs/scoring.md, docs/harness-spec.md, LIMITATIONS.md)
+Resume file: None
