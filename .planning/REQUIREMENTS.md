@@ -44,7 +44,7 @@
 
 ### Results Dashboard
 
-- [ ] **DASH-01**: Dashboard is deployed and publicly accessible on Vercel
+- [x] **DASH-01**: Dashboard is deployed and publicly accessible on Vercel
 - [x] **DASH-02**: Dashboard shows model comparison table: all models × all harnesses with composite score, cost (USD), latency (ms)
 - [x] **DASH-03**: Dashboard shows per-dimension score breakdown for each model (bar or radar chart)
 - [x] **DASH-04**: Dashboard shows run metadata per result: model name+version, run date, harness version, temperature
@@ -122,7 +122,7 @@
 | REF-01 | Phase 4 | Complete |
 | REF-02 | Phase 4 | Complete |
 | REF-03 | Phase 4 | Complete |
-| DASH-01 | Phase 5 | Pending |
+| DASH-01 | Phase 5 | Complete |
 | DASH-02 | Phase 5 | Complete |
 | DASH-03 | Phase 5 | Complete |
 | DASH-04 | Phase 5 | Complete |

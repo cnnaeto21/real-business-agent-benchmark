@@ -1,0 +1,28 @@
+{
+  "name": "rbab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "benchmark": "./src/bin.ts"
+  },
+  "scripts": {
+    "validate": "tsx scripts/validate-schemas.ts",
+    "benchmark": "tsx src/bin.ts",
+    "reference": "tsx scripts/run-reference.ts",
+    "verify-reference": "tsx scripts/verify-reference.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "@google/genai": "^1.45.0",
+    "commander": "^14.0.3",
+    "js-yaml": "^4.1.1",
+    "openai": "^6.29.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "tsx": "^4.15.0",
+    "typescript": "^5.4.0"
+  }
+}
