@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 05-dashboard-01-PLAN.md
-last_updated: "2026-03-20T01:25:39.409Z"
+stopped_at: Completed 05-dashboard-02-PLAN.md
+last_updated: "2026-03-21T19:28:45.595Z"
 last_activity: "2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
 progress:
   total_phases: 6
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 17
-  completed_plans: 15
+  completed_plans: 16
   percent: 80
 ---
 
@@ -65,6 +65,7 @@ Progress: [████████░░] 80%
 | Phase 03-eval-engine P04 | 2 | 1 tasks | 1 files |
 | Phase 04-reference-runs P01 | 10 | 2 tasks | 3 files |
 | Phase 05-dashboard P01 | 9 | 2 tasks | 11 files |
+| Phase 05-dashboard P02 | 30 | 3 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -115,6 +116,8 @@ Recent decisions affecting current work:
 - [Phase 05-dashboard]: Split lib/types.ts from lib/data.ts so Client Components can import interfaces without bundling fs/promises
 - [Phase 05-dashboard]: DimensionChartWrapper is a Client Component owning dynamic+ssr:false — ssr:false not allowed in Server Components in Next.js 16+
 - [Phase 05-dashboard]: web/ scaffolded with Next.js 16.2.0 (Turbopack, Tailwind v4, App Router)
+- [Phase 05-dashboard]: results/ committed to git (not gitignored) — required for Vercel static build to access benchmark data at build time
+- [Phase 05-dashboard]: Vercel Include files outside root=Enabled — allows web/ subdirectory build to access results/ at repo root
 
 ### Pending Todos
 
@@ -127,6 +130,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-20T01:25:39.400Z
-Stopped at: Completed 05-dashboard-01-PLAN.md
+Last session: 2026-03-21T19:28:45.589Z
+Stopped at: Completed 05-dashboard-02-PLAN.md
 Resume file: None
