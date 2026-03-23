@@ -1,27 +1,27 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.0
-milestone_name: milestone
-status: executing
-stopped_at: Completed 06-02-PLAN.md — all documentation phase complete, human checkpoint approved
-last_updated: "2026-03-21T22:36:15.666Z"
-last_activity: "2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)"
+milestone_name: MVP
+status: milestone_complete
+stopped_at: v1.0 milestone archived — all 6 phases complete, git tag v1.0 pending
+last_updated: "2026-03-22T00:00:00.000Z"
+last_activity: "2026-03-21 — v1.0 milestone complete: 6 phases, 17 plans, 9 reference runs, Vercel dashboard live"
 progress:
   total_phases: 6
-  completed_phases: 5
-  total_plans: 19
-  completed_plans: 18
-  percent: 80
+  completed_phases: 6
+  total_plans: 17
+  completed_plans: 17
+  percent: 100
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-12)
+See: .planning/PROJECT.md (updated 2026-03-22 after v1.0 milestone)
 
 **Core value:** Any agent builder should be able to run `benchmark --harness inventory --model gpt-4o` and get a reproducible, comparable score — proving (or disproving) that their agent can actually help run a business.
-**Current focus:** Phase 1 — Harness Definitions
+**Current focus:** Planning next milestone — run `/gsd:new-milestone`
 
 ## Current Position
 
