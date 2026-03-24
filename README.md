@@ -18,7 +18,7 @@ Requires `ANTHROPIC_API_KEY` set. See [docs/running.md](docs/running.md) for ful
 | google/gemini-3.1-flash-lite-preview | 93 | 80 | 87 |
 | openai/gpt-4o-mini | 67 | 67 | 60 |
 
-Full detail and per-dimension breakdowns at [[paste Vercel dashboard URL here]].
+Full detail and per-dimension breakdowns at [Dashboard](https://real-business-agent-benchmark-git-master-obis-projects-f49f6211.vercel.app/).
 
 ---
 
@@ -59,7 +59,7 @@ RBAB covers three business domains and three models — a useful signal but not 
 
 ## Credit
 
-RBAB is the implementation of [Bret Taylor's concept]([paste Bret Taylor post URL here]) of a CSS Zen Garden for agent harnesses — a fixed problem set that reveals how different models actually perform on the same task.
+RBAB is the implementation of [Bret Taylor's concept](https://www.linkedin.com/posts/brettaylor_meta-benchmark-idea-a-collection-of-basic-activity-7436989645537767424-AcGr?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACbv1I0BWSrg4HytIIQACiC95ZqKLEZrKm0) of a CSS Zen Garden for agent harnesses — a fixed problem set that reveals how different models actually perform on the same task.
 
 ---
 
