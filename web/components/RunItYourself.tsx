@@ -44,7 +44,7 @@ export default function RunItYourself() {
         
         <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-4 text-[10px] font-black uppercase tracking-[0.2em]">
           <a
-            href="https://github.com/obinnaeto/agentHarness/blob/master/docs/running.md"
+            href="https://github.com/cnnaeto21/real-business-agent-benchmark/blob/master/docs/running.md"
             className="text-sierra-forest hover:text-sierra-emerald transition-all duration-300 border-b-2 border-sierra-emerald/20 hover:border-sierra-emerald pb-1"
             target="_blank"
             rel="noopener noreferrer"

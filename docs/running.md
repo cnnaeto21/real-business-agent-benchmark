@@ -11,8 +11,8 @@ This guide walks you through running any RBAB harness against any supported mode
 ## 1. Clone and Install
 
 ```bash
-git clone https://github.com/obinnaeto/agentHarness.git
-cd agentHarness
+git clone https://github.com/cnnaeto21/real-business-agent-benchmark.git
+cd real-business-agent-benchmark
 npm install
 ```
 
