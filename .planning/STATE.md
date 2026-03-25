@@ -1,17 +1,17 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: MVP
-status: milestone_complete
-stopped_at: v1.0 milestone archived — all 6 phases complete, git tag v1.0 pending
+milestone: v1.1
+milestone_name: Integrity
+status: planning
+stopped_at: Requirements defined — roadmap pending
 last_updated: "2026-03-22T00:00:00.000Z"
-last_activity: "2026-03-21 — v1.0 milestone complete: 6 phases, 17 plans, 9 reference runs, Vercel dashboard live"
+last_activity: "2026-03-22 — v1.1 milestone started: 12 requirements defined, roadmap next"
 progress:
-  total_phases: 6
-  completed_phases: 6
-  total_plans: 17
-  completed_plans: 17
-  percent: 100
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22 after v1.0 milestone)
 
 **Core value:** Any agent builder should be able to run `benchmark --harness inventory --model gpt-4o` and get a reproducible, comparable score — proving (or disproving) that their agent can actually help run a business.
-**Current focus:** Planning next milestone — run `/gsd:new-milestone`
+**Current focus:** v1.1 Integrity — multi-judge ensemble, real data, flagship models
 
 ## Current Position
 
-Phase: 1 of 6 (Harness Definitions)
-Plan: 4 of 5 in current phase
-Status: In Progress
-Last activity: 2026-03-15 — Completed 01-04 (financial-forecasting harness: harness.yaml, schema.ts, prompt.md, rubric.md, 2 CSVs)
+Phase: Not started (roadmap pending)
+Plan: —
+Status: Requirements defined, roadmap next
+Last activity: 2026-03-22 — v1.1 requirements defined (12 requirements across 4 categories)
 
 Progress: [████████░░] 80%
 

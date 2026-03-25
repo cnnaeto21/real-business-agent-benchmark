@@ -8,6 +8,15 @@ An open-source benchmark suite that tests AI agents on real business operations 
 
 Any agent builder or operator should be able to run `benchmark --harness inventory --model gpt-4o` and get a reproducible, comparable score — proving (or disproving) that their agent can actually help run a business.
 
+## Current Milestone: v1.1 Integrity
+
+**Goal:** Replace biased single-Claude judge with a 3-model ensemble, swap synthetic data for real vending data, and re-run reference benchmarks against equivalent flagship models.
+
+**Target features:**
+- Multi-judge ensemble (Claude + GPT-4o + Gemini, simple average, disagreement flag)
+- Real vending machine CSV data across all 3 harnesses
+- Flagship model tier comparison (claude-sonnet-4-6 vs gpt-4o vs gemini-2.5-pro)
+
 ## Requirements
 
 ### Validated
