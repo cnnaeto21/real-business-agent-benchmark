@@ -70,23 +70,24 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| JUDG-01 | TBD | Pending |
-| JUDG-02 | TBD | Pending |
-| JUDG-03 | TBD | Pending |
-| JUDG-04 | TBD | Pending |
-| JUDG-05 | TBD | Pending |
-| DATA-01 | TBD | Pending |
-| DATA-02 | TBD | Pending |
-| REF-06 | TBD | Pending |
-| REF-07 | TBD | Pending |
-| DASH-06 | TBD | Pending |
-| DASH-07 | TBD | Pending |
-| DOCS-06 | TBD | Pending |
+| JUDG-01 | Phase 8 | Pending |
+| JUDG-02 | Phase 8 | Pending |
+| JUDG-03 | Phase 8 | Pending |
+| JUDG-04 | Phase 8 | Pending |
+| JUDG-05 | Phase 8 | Pending |
+| DATA-01 | Phase 7 | Pending |
+| DATA-02 | Phase 7 | Pending |
+| REF-06 | Phase 9 | Pending |
+| REF-07 | Phase 9 | Pending |
+| DASH-06 | Phase 10 | Pending |
+| DASH-07 | Phase 10 | Pending |
+| DOCS-06 | Phase 10 | Pending |
 
 **Coverage:**
 - v1.1 requirements: 12 total
-- Mapped to phases: 0 (roadmap pending)
-- Unmapped: 12
+- Mapped to phases: 12
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-22*
+*Traceability updated: 2026-03-24 (v1.1 roadmap Phases 7-10)*

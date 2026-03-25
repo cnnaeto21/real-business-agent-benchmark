@@ -3,11 +3,11 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: Integrity
 status: planning
-stopped_at: Requirements defined — roadmap pending
-last_updated: "2026-03-22T00:00:00.000Z"
-last_activity: "2026-03-22 — v1.1 milestone started: 12 requirements defined, roadmap next"
+stopped_at: Roadmap created — Phase 7 ready to plan
+last_updated: "2026-03-24T00:00:00.000Z"
+last_activity: "2026-03-24 — v1.1 roadmap created: 4 phases (7-10), 12 requirements mapped"
 progress:
-  total_phases: 0
+  total_phases: 4
   completed_phases: 0
   total_plans: 0
   completed_plans: 0
@@ -18,113 +18,56 @@ progress:
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-22 after v1.0 milestone)
+See: .planning/PROJECT.md (updated 2026-03-21 after v1.0 milestone)
 
 **Core value:** Any agent builder should be able to run `benchmark --harness inventory --model gpt-4o` and get a reproducible, comparable score — proving (or disproving) that their agent can actually help run a business.
-**Current focus:** v1.1 Integrity — multi-judge ensemble, real data, flagship models
+**Current focus:** v1.1 Integrity — Phase 7: Real Data Ingestion
 
 ## Current Position
 
-Phase: Not started (roadmap pending)
-Plan: —
-Status: Requirements defined, roadmap next
-Last activity: 2026-03-22 — v1.1 requirements defined (12 requirements across 4 categories)
+Phase: 7 of 10 (Real Data Ingestion)
+Plan: — (not yet planned)
+Status: Roadmap defined, ready to plan Phase 7
+Last activity: 2026-03-24 — v1.1 roadmap written (Phases 7-10, 12 requirements mapped, 100% coverage)
 
-Progress: [████████░░] 80%
+Progress: [████████░░] 60% (6/10 phases complete across both milestones)
 
 ## Performance Metrics
 
-**Velocity:**
-- Total plans completed: 2
-- Average duration: 3 min
-- Total execution time: ~6 min
+**Velocity (v1.0):**
+- Total plans completed: 19
+- Average duration: ~28 min (excl. outlier P02 cli-runner)
+- Total execution time: ~9 hours
 
-**By Phase:**
+**By Phase (v1.0):**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-harness-definitions | 2/5 | 6 min | 3 min |
+| 01-harness-definitions | 5 | ~15 min | ~3 min |
+| 02-cli-runner | 4 | ~540 min | ~135 min |
+| 03-eval-engine | 4 | ~17 min | ~4 min |
+| 04-reference-runs | 2 | ~13 min | ~7 min |
+| 05-dashboard | 2 | ~39 min | ~20 min |
+| 06-documentation-and-launch | 2 | ~10 min | ~5 min |
 
 **Recent Trend:**
-- Last 5 plans: 2 min, 4 min
-- Trend: -
+- v1.1 not yet started
+- Trend: —
 
 *Updated after each plan completion*
-| Phase 01-harness-definitions P04 | 3 | 2 tasks | 7 files |
-| Phase 01-harness-definitions P03 | 5 | 2 tasks | 7 files |
-| Phase 01-harness-definitions P05 | 2 | 2 tasks | 1 files |
-| Phase 02-cli-runner P01 | 3 | 3 tasks | 7 files |
-| Phase 02-cli-runner P03 | 8 | 2 tasks | 4 files |
-| Phase 02-cli-runner P02 | 525643 | 2 tasks | 4 files |
-| Phase 02-cli-runner P04 | 5 | 1 tasks | 2 files |
-| Phase 02-cli-runner P04 | 5 | 2 tasks | 2 files |
-| Phase 03-eval-engine P01 | 3 | 1 tasks | 1 files |
-| Phase 03-eval-engine P02 | 3 | 1 tasks | 1 files |
-| Phase 03-eval-engine P03 | 1 | 1 tasks | 3 files |
-| Phase 03-eval-engine P03 | 10 | 2 tasks | 3 files |
-| Phase 03-eval-engine P04 | 2 | 1 tasks | 1 files |
-| Phase 04-reference-runs P01 | 10 | 2 tasks | 3 files |
-| Phase 05-dashboard P01 | 9 | 2 tasks | 11 files |
-| Phase 05-dashboard P02 | 30 | 3 tasks | 2 files |
-| Phase 06-documentation-and-launch P01 | 3 | 3 tasks | 3 files |
-| Phase 06-documentation-and-launch P02 | 1 | 1 tasks | 1 files |
-| Phase 06-documentation-and-launch P02 | 6 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
 ### Decisions
 
 Decisions are logged in PROJECT.md Key Decisions table.
-Recent decisions affecting current work:
+Recent decisions affecting v1.1 work:
 
-- [Pre-Phase 1]: Rubric dimension definitions and calibration examples are high-stakes — changing the rubric after reference runs invalidates all scored results. Must be locked in Phase 1 before any code is written.
-- [Pre-Phase 1]: EVAL-02 (judge prompt design) assigned to Phase 1, not Phase 3, because the judge prompt is a harness artifact that must be stable before the eval engine is built.
-- [Pre-Phase 1]: 6 phases retained despite coarse granularity setting — the strict architectural dependency chain (spec → runner → eval → runs → dashboard → docs) cannot be compressed without creating unverifiable intermediate states.
-- [Phase 01-harness-definitions]: Used Zod v4 native z.toJSONSchema() — zod-to-json-schema is EOL as of November 2025
-- [Phase 01-harness-definitions]: validate-schemas.ts uses dynamic import loop so Plans 02-04 can drop in schema.ts files without modifying the script
-- [Phase 01-harness-definitions 01-02]: CSV data designed with intentional decision gradient (~7 restock, ~7 borderline, ~6 hold/reduce) to maximize model reasoning differentiation
-- [Phase 01-harness-definitions 01-02]: Rubric completeness dimension explicitly names schema fields (summary, recommendations, data_gaps) — established as pattern for Plans 03-04
-- [Phase 01-harness-definitions]: Financial schema captures nested forecast object (6 sub-fields) to enforce that models commit to specific dollar figures rather than directional statements
-- [Phase 01-harness-definitions]: CSV data deliberately shows margin compression (operating expenses growing faster than revenue) to create meaningful forecasting challenge
-- [Phase 01-harness-definitions]: CSV data designed with contrasting SKU margin/velocity profiles for multi-directional pricing decisions
-- [Phase 01-harness-definitions]: Rubric Completeness dimension references exact schema field names (summary, recommendations, market_observations) for judge alignment
-- [Phase 01-harness-definitions]: Judge prompt v1.0.0 locked — changes require re-scoring all existing reference runs to preserve benchmark reproducibility
-- [Phase 01-harness-definitions]: Judge prompt uses placeholder injection pattern ({{model_output}}, {{rubric}}) so eval engine injects harness-specific content at runtime
-- [Phase 01-harness-definitions]: Three scoring dimensions (actionability, reasoning_transparency, completeness) confirmed consistent across all three harness rubrics and judge prompt output format
-- [Phase 02-cli-runner]: zodSchema typed as unknown in RunOptions to avoid forcing zod import in shared contracts file
-- [Phase 02-cli-runner]: Wave 0 tests use Node built-in assert (no framework) — simpler, no additional dependencies
-- [Phase 02-cli-runner]: Provider routing by string prefix (anthropic/, openai/, google/) — explicit dispatch, no registry/map indirection
-- [Phase 02-cli-runner]: Google adapter uses responseJsonSchema (not responseSchema) — since @google/genai v1.9.0, plain JSON Schema objects from z.toJSONSchema() must go in responseJsonSchema; responseSchema expects typed SchemaUnion
-- [Phase 02-cli-runner]: Anthropic adapter implements tool use with tool_choice forced per RUN-04 — not output_config.format, even though native Structured Outputs is now GA
-- [Phase 02-cli-runner]: loadHarness throws on missing separator (not warning) — prevents silent malformed prompts from reaching providers
-- [Phase 02-cli-runner]: calculateCost returns -1 sentinel for unknown models instead of throwing — allows benchmark run to complete with flagged cost
-- [Phase 02-cli-runner]: Placeholder assertion runs post-injection in loadHarness — catches harness authoring errors (YAML/template mismatch) at load time not run time
-- [Phase 02-cli-runner]: Schema loaded via dynamic import(schemaPath) at runtime — supports adding new harnesses without modifying cli.ts
-- [Phase 02-cli-runner]: Commander requiredOption used for --harness and --model — exits with clear error and non-zero code when omitted
-- [Phase 02-cli-runner]: Schema loaded via dynamic import(schemaPath) at runtime — supports adding new harnesses without modifying cli.ts
-- [Phase 02-cli-runner]: Commander requiredOption used for --harness and --model — exits with clear error and non-zero code when omitted
-- [Phase 03-eval-engine]: TDD RED state is intentional: single tsc error is Cannot find module src/eval.ts — file is otherwise valid TypeScript
-- [Phase 03-eval-engine]: JudgeResponse score min is 1 (not 0) — 0 is reserved for schema validation failures, not a valid judge score
-- [Phase 03-eval-engine]: Judge called in plain text messages.create (no tools) — judge prompt instructs JSON-only output; Zod validation applied on parsed text
-- [Phase 03-eval-engine]: Schema validation failure writes zero-score ScoredResult to scored/ and index.json; judge is never called on invalid output
-- [Phase 03-eval-engine]: Judge API failure: catch error, log to stderr, return without writing scored/ — preserves raw output from expensive model run
-- [Phase 03-eval-engine]: --skip-eval flag (not --no-eval) used to avoid Commander v14 --no-* boolean negation footgun — no --eval flag exists so --no-eval would silently misbehave
-- [Phase 03-eval-engine]: calculateCost recomputed in cli.ts for runEval meta rather than threading from output.ts — keeps interface boundaries clean
-- [Phase 03-eval-engine]: Judge JSON response wrapped in markdown code fences by model in practice — strip fences before JSON.parse in callJudge (auto-fixed, commit 31ef007)
-- [Phase 03-eval-engine]: Re-eval accepts only --run-id; all other metadata recovered from meta.json — single source of truth
-- [Phase 03-eval-engine]: loadHarness called fresh at re-eval time (not stored spec) — enables rubric changes to be applied to old runs without re-invoking LLM
-- [Phase 03-eval-engine]: No Commander in re-eval.ts — single --run-id flag handled with manual argv parsing to keep script minimal
-- [Phase 04-reference-runs]: Module guard in verify-reference.ts prevents main() executing on import — required because script is both importable module and standalone CLI
-- [Phase 04-reference-runs]: Dry-run exits 0 regardless of env var failures — env var absence is informational, not a script error
-- [Phase 05-dashboard]: Split lib/types.ts from lib/data.ts so Client Components can import interfaces without bundling fs/promises
-- [Phase 05-dashboard]: DimensionChartWrapper is a Client Component owning dynamic+ssr:false — ssr:false not allowed in Server Components in Next.js 16+
-- [Phase 05-dashboard]: web/ scaffolded with Next.js 16.2.0 (Turbopack, Tailwind v4, App Router)
-- [Phase 05-dashboard]: results/ committed to git (not gitignored) — required for Vercel static build to access benchmark data at build time
-- [Phase 05-dashboard]: Vercel Include files outside root=Enabled — allows web/ subdirectory build to access results/ at repo root
-- [Phase 06-documentation-and-launch]: docs/running.md confirmed already complete for DOCS-03 — no changes made
-- [Phase 06-documentation-and-launch]: Score anchors in docs/scoring.md copied verbatim from rubric.md — not paraphrased
-- [Phase 06-documentation-and-launch]: Vercel dashboard URL left as placeholder — vercel CLI unavailable; user must paste URL before launch
-- [Phase 06-documentation-and-launch]: Bret Taylor post URL left as placeholder — post not locatable with certainty; user must paste URL before launch
+- [v1.1 Roadmap]: Phase 7 requires human gate — user must provide real CSV files before anonymization can proceed; AI cannot generate them
+- [v1.1 Roadmap]: JUDG-05 (IndexEntry backfill) scoped to Phase 8 — schema changes must be in place before any ensemble result is written; prevents leaderboard comparability bug
+- [v1.1 Roadmap]: Self-preference exclusion is table stakes in Phase 8 (not v2) — retrofitting after reference runs would require re-scoring all 9 results again
+- [v1.1 Roadmap]: Phase 9 depends on both Phase 7 (real data) and Phase 8 (ensemble engine) — no partial reference runs acceptable
+- [v1.1 Roadmap]: Gemini model ID (`gemini-2.5-pro`) flagged as MEDIUM confidence — verify at Phase 9 implementation; fallback is `gemini-2.5-pro-preview-05-06`
 
 ### Pending Todos
 
@@ -132,11 +75,13 @@ None yet.
 
 ### Blockers/Concerns
 
-- [Phase 1]: Rubric dimension calibration examples are novel (no established standard for business task benchmarks). May benefit from a research pass on MT-Bench and AlpacaEval judge prompt designs before authoring the rubric.
-- [Phase 3]: LLM-as-judge prompt engineering is noted in research as potentially needing a targeted research pass.
+- [Phase 7]: Human gate — user must supply real vending machine CSV files; Phase 7 cannot start until files are provided
+- [Phase 8]: GPT-4o and Gemini JSON output behavior under current judge prompt is empirically unknown; low reliability could expand Phase 8 scope to include native structured output API integration
+- [Phase 8]: Score calibration (z-score normalization decision) cannot be resolved until Phase 8 provider integration is empirically tested
+- [Phase 9]: Gemini model ID volatility — verify `gemini-2.5-pro` resolves at implementation time
 
 ## Session Continuity
 
-Last session: 2026-03-21T22:10:16.126Z
-Stopped at: Completed 06-02-PLAN.md — all documentation phase complete, human checkpoint approved
+Last session: 2026-03-24
+Stopped at: v1.1 roadmap created — ROADMAP.md, STATE.md, REQUIREMENTS.md updated; Phase 7 ready to plan
 Resume file: None
